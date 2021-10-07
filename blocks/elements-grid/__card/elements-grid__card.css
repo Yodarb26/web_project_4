@@ -1,0 +1,6 @@
+.elements-grid__card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+    grid-template-rows: minmax(282px, auto);
+    grid-gap: 17px;
+}     
