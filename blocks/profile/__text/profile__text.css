@@ -1,0 +1,10 @@
+.profile__text{
+    display:flex;
+    flex-wrap:wrap;
+    list-style: none;
+    flex-direction:column;
+    margin: 0;
+    
+  
+    
+}
