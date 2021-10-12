@@ -1,0 +1,10 @@
+.profile__edit-button{
+    display:flex;
+    flex-direction: row;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    width:24px;
+    height:24px;
+    background-image: url(../../images/pen.svg);
+    z-index: 1;
+}

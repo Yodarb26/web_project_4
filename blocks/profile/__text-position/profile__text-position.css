@@ -1,0 +1,12 @@
+.profile__text-position{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    max-width: 415px;
+    margin: 0;
+    padding: 0;
+    
+   
+    
+}

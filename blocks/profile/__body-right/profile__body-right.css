@@ -1,0 +1,9 @@
+.profile__body-right{
+    display: flex;
+    justify-content:right;
+    vertical-align: bottom;
+    width: 100%;
+    max-width: 345px;
+    margin: auto;
+
+}

@@ -1,0 +1,7 @@
+.profile__body-left{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    max-width: 535px;
+}
