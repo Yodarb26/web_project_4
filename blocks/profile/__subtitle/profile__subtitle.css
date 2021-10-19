@@ -4,10 +4,22 @@
     font-family: "Inter", Arial, sans-serif;
     width:100%;
     max-width: 415px;
-   
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    
     color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .profile__subtitle {
+        text-align: center;
+        width: 282px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .profile__subtitle {
+        padding: 14px 0 0 0;
+    }
 }

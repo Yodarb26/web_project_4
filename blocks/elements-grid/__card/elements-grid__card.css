@@ -4,3 +4,13 @@
     grid-template-rows: minmax(282px, auto);
     grid-gap: 17px;
 }     
+
+
+
+@media only screen and (max-width: 320px) {
+    .elements-grid__card {
+        margin: 0 auto;
+        
+    }
+    
+}

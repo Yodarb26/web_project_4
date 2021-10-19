@@ -3,3 +3,11 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+
+@media only screen and (max-width: 768px) {
+    .profile__edit-container {
+        width:282px;
+        margin: 0 auto;
+
+    }
+}

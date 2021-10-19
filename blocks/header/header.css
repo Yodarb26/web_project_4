@@ -6,3 +6,19 @@
     padding-top: 45px;
     justify-content: left;
 }
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        max-width: 680px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header {
+        padding-top: 28px;
+        margin-left: 27px;
+        width: 100%;
+        max-width: 126px;
+    }
+}

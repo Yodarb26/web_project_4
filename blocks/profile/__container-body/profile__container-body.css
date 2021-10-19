@@ -5,3 +5,21 @@
     width: 100%;
     max-width: 880px;
 }
+
+@media only screen and (max-width: 768px) {
+    .profile__container-body {
+        margin: 0 auto;
+        width: 402px;
+        padding: 0;
+    
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .profile__container-body {
+        width: 282px;
+        height: 286px;
+        padding: 0 auto;
+    
+    }
+}

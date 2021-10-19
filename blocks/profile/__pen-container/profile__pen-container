@@ -1,0 +1,17 @@
+.profile__pen-container {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .profile__pen-container {
+        margin:35px auto 0 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .profile__pen-container {
+        margin:25px auto 0 0;
+    }
+}

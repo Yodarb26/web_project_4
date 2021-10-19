@@ -6,7 +6,21 @@
     max-width: 415px;
     margin: 0;
     padding: 0;
-    
-   
-    
+}
+
+
+@media only screen and (max-width: 768px) {
+    .profile__text-position {
+        width: 100%;
+        max-width: 282px;
+
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .profile__text-position {
+        width: 100%;
+        max-width: 282px;
+
+    }
 }

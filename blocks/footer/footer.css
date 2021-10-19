@@ -1,6 +1,27 @@
 .footer{
+    width: 100%;
+    max-width: 318px;
+    height: 18px;
     margin: 0;
     padding-top:68px;
     padding-bottom:60px;
-    font-family: "Inter", Arial, sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        width: 100%;
+        max-width: 680px;
+        margin: 50px auto 36px auto;
+        padding:0;
+    }
+    
+}
+
+
+@media only screen and (max-width: 320px) {
+    .footer {
+        width: 100%;
+        max-width: 282px;       
+    }
+    
 }

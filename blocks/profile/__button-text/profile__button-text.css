@@ -1,0 +1,15 @@
+.profile__button-text{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width:100%;
+    max-width: 415px;
+    text-align: center;
+    margin: 0;
+}
+
+@media only screen and (max-width: 320px) {
+    .profile__button-text {
+        width:100%;
+        max-width: 282px;
+    }
+}

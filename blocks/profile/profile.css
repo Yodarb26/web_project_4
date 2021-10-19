@@ -10,3 +10,11 @@
     flex-wrap: wrap;
     flex-direction:inline-block;
 }
+
+@media only screen and (max-width: 320px) {
+    .profile {
+        width:282px;
+        height: 286px;
+        margin: 38px auto 36px auto;
+    }
+}

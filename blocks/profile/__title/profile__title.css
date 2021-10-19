@@ -1,6 +1,6 @@
 .profile__title{
     margin:0;
-    padding-top:26px;
+    padding: 26px 18px 0 0; 
     font-size: 65px;
     font-family: "Inter", Arial, sans-serif;
     width: 100%;
@@ -12,4 +12,20 @@
     line-height: 48px;
     color: #FFFFFF;
     align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile__title {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .profile__title {
+        width: 100%;
+        max-width:196px;
+        font-size: 22px;
+        padding: 0;
+        margin:0 0 0 29px;
+    }
 }
