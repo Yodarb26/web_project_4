@@ -1,0 +1,12 @@
+.modal__popup{
+    margin: auto;
+    /* width:430px;
+    height:330px; */
+    background-color: #fff;
+    border-radius:10px; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

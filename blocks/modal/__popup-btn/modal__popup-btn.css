@@ -1,0 +1,20 @@
+ .modal__popup-btn{
+    position: absolute;
+    transform: rotate(-45deg);
+    width:40px;
+    height:40px;
+    top:-35px;
+    right:-35px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+    /* top:146px;
+    left:847px;
+    bottom:517px;
+    right:376px; */
+    background: black;
+    border: none;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-image: url(../../../images/closeicon.svg);
+
+} 
