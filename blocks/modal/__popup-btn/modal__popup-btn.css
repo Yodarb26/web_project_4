@@ -1,7 +1,7 @@
  .modal__popup-btn{
     position: absolute;
-    width:26px;
-    height:26px;
+    width:40px;
+    height:40px;
     top:-40px;
     right:0;
     text-align: center;
@@ -24,12 +24,12 @@
     
 } */
 
-@media (min-width: 550px) {
+@media (min-width: 320px) {
     .modal__popup-btn {
-        width: 40px;
-        height: 40px;
-        top: -35px;
-        right: -40px;
+        width:26px;
+        height:26px;
+        top: -40px;
+        right: -5px;
       }
     
 }
