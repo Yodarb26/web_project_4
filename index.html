@@ -1,131 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="pages/index.css" />
         <title>Around the U.S</title>
     </head>
 
     <body class="page">
-         <div class="modal">
+        <div class="modal">
             <div class="modal__popup">
-                <button class="modal__popup-btn"></button> 
-                
+                <button class="modal__popup-btn"></button>
                 <form class="form">
                     <p class="form__title">Edit profile</p>
-
-                    <input class="form__name" type="text" name="name" />
-                    <!-- <hr class="form__separator"> -->
-               
-                    <input class="form__text" type="text" name="title" />
-                    <!-- <hr class="form__separator"> -->
-
-                    <button class="form__save-button"><p class="form__save-text">save</p></button>
+                    <input class="form__input" type="text" name="name" />
+                    <input class="form__input" type="text" name="title" />
+                    <button class="form__save-button opacity">Save</button>
                 </form>
-            </div> 
+            </div>
         </div>
         <div class="page__wrapper">
-            
             <header class="header container">
                 <img class="logo" src="./images/logo/Vector.svg" alt="logo" />
             </header>
-            <hr class="header__separator">
-            
+            <hr class="header__separator" />
+
             <main>
                 <section class="profile">
                     <div class="profile__container-body">
-
                         <div class="profile__body-left">
-                                <img class="profile__photo" src="images/jcousteau.jpg" alt="avatar" />
-                            
+                            <img class="profile__photo" src="images/jcousteau.jpg" alt="avatar" />
                             <div class="profile__text-position">
-                                
-                                    <div class="profile__edit-container">
-                                        <div class="profile__button-text">
-                                            <h1 class="profile__title">Jacques Cousteau</h1>
-                                            
-                                                <div class="profile__pen-container">
-                                                    <button class="profile__edit-button"><img class="profile__pen-image" src="./images/pen.svg" /></button>
-                                                </div>
-                                                
-                                               
+                                <div class="profile__edit-container">
+                                    <div class="profile__button-text">
+                                        <h1 class="profile__title">Jacques Cousteau</h1>
+                                        <div class="profile__pen-container">
+                                            <button class="profile__edit-button"><img class="profile__pen-image" src="./images/pen.svg" /></button>
                                         </div>
-                                        
-                  
                                     </div>
-                                    
-                                    <p class="profile__subtitle">Explorer</p>
+                                </div>
+                                <p class="profile__subtitle">Explorer</p>
                             </div>
-                            
                         </div>
 
                         <div class="profile__body-right">
-                                <button class="profile__plus-button"><img src="./images/plus.svg" /></button>
+                            <button class="profile__plus-button"><img src="./images/plus.svg" /></button>
                         </div>
                     </div>
- 
                 </section>
-                
-                
-                <section class="elements-grid">
 
+                <section class="elements-grid">
                     <div class="elements-grid__card">
                         <div class="elements-grid__cards">
                             <img class="elements-grid__image" src="./images/unsplash2.jpg" alt="1" />
-                         
-                                    <p class="elements-grid__text">Yosemite valley<img class="elements-grid__icon" src="./images/heart.svg" /></p>
-                         
+
+                            <p class="elements-grid__text">Yosemite valley<img class="elements-grid__icon" src="./images/heart.svg" /></p>
                         </div>
-                    
+
                         <div class="elements-grid__cards">
                             <img class="elements-grid__image" src="./images/unsplash2.jpg" alt="1" />
-                       
-                                <p class="elements-grid__text">Lake Louise<img class="elements-grid__icon" src="./images/heart.svg" /></p>
-                          
+
+                            <p class="elements-grid__text">Lake Louise<img class="elements-grid__icon" src="./images/heart.svg" /></p>
                         </div>
-                   
+
                         <div class="elements-grid__cards">
                             <img class="elements-grid__image" src="./images/unsplash3.jpg" alt="1" />
-                         
-                                <p class="elements-grid__text">Bald Mountains<img class="elements-grid__icon" src="./images/heart.svg" /></p>
-                        
+
+                            <p class="elements-grid__text">Bald Mountains<img class="elements-grid__icon" src="./images/heart.svg" /></p>
                         </div>
 
                         <div class="elements-grid__cards">
                             <img class="elements-grid__image" src="./images/unsplash4.jpg" alt="1" />
-                            
-                                <p class="elements-grid__text">Latemar<img class="elements-grid__icon" src="./images/heart.svg" /></p>
-                                
-                           
+
+                            <p class="elements-grid__text">Latemar<img class="elements-grid__icon" src="./images/heart.svg" /></p>
                         </div>
 
                         <div class="elements-grid__cards">
                             <img class="elements-grid__image" src="./images/unsplash5.jpg" alt="1" />
-                      
-                                <p class="elements-grid__text">Vanoise Mational<img class="elements-grid__icon" src="./images/heart.svg" /></p>
-                        
+
+                            <p class="elements-grid__text">Vanoise Mational<img class="elements-grid__icon" src="./images/heart.svg" /></p>
                         </div>
 
                         <div class="elements-grid__cards">
                             <img class="elements-grid__image" src="./images/unsplash6.jpg" alt="1" />
-                        
-                                <p class="elements-grid__text">Lago di braies<img class="elements-grid__icon" src="./images/heart.svg" /></p>
-                       
+
+                            <p class="elements-grid__text">Lago di braies<img class="elements-grid__icon" src="./images/heart.svg" /></p>
                         </div>
                     </div>
-
                 </section>
-               
 
                 <section class="footer">
                     <p class="footer__copyright">© 2021. Around the US.</p>
-
                 </section>
-                
-
             </main>
         </div>
     </body>
 </html>
-

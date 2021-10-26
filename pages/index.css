@@ -24,13 +24,9 @@
 @import url(../blocks/modal/__popup-btn/modal__popup-btn.css);
 
 @import url(../blocks/form/form.css);
-@import url(../blocks/form/__separator/form__separator.css);
+@import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/__title/form__title.css);
-@import url(../blocks/form/__name/form__name.css);
-@import url(../blocks/form/__text/form__text.css);
 @import url(../blocks/form/__save-button/form__save-button.css);
-@import url(../blocks/form/__save-text/form__save-text.css);
-
 
 @import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__photo/profile__photo.css);
