@@ -1,8 +1,9 @@
 .modal__popup{
     position: relative;
-    margin: auto 10px;
+    margin: auto;
+    width: auto;
     padding: 25px 22px;
-    width: 100%;
+    width: 430px;
     border-radius:10px; 
     box-shadow: 0 0 25px rgba(0, 0, 0, 0, 0.15);
     box-sizing: border-box;
@@ -13,8 +14,8 @@
     .modal__popup {
         margin: auto;
         width: auto;
-        min-width: 430px;
-        padding: 36px;
+        /* min-width: 430px; */
+        /* padding: 36px;
       }
     
 } */
