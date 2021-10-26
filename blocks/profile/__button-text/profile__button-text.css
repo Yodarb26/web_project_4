@@ -2,7 +2,7 @@
     display: inline-grid;
     grid-template-columns: auto auto;
     width:100%;
-    max-width: 415px;
+    max-width: 445px;
     text-align: center;
     margin: 0;
 }
