@@ -10,5 +10,6 @@
 @media only screen and (max-width: 320px) {
     .elements-grid__card {
         margin: 0 auto;
+        grid-gap: 20px;
     } 
 }

@@ -4,3 +4,12 @@
     padding: 0;
     margin:5px 3px 1px 0;
 }
+
+.elements-grid__icon:hover {
+    opacity: 0.6;
+}
+
+.elements-grid__icon:active {
+    background:#000000;
+    color:#000000;
+}
