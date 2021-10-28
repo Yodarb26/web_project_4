@@ -30,7 +30,7 @@
 @import url(../blocks/modal/modal.css);
 @import url(../blocks/modal/__popup/modal__popup.css);
 @import url(../blocks/modal/__popup-btn/modal__popup-btn.css);
-@import url(../blocks/modal/__is-open/modal__is-open.css);
+@import url(../blocks/modal/__is_open/modal__is_open.css);
 
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__title/form__title.css);
