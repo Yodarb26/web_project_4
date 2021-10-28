@@ -11,18 +11,7 @@
     object-fit: cover;
     background: transparent url(../../../images/closeicon.svg) no-repeat;
     cursor: pointer;
-
 } 
-
-/* @media only screen and (min-width: 550px) {
-    .modal__popup-btn {
-        width: 40px;
-        height: 40px;
-        top: -35px;
-        right: -40px;
-      }
-    
-} */
 
 @media (min-width: 320px) {
     .modal__popup-btn {
@@ -30,6 +19,5 @@
         height:26px;
         top: -40px;
         right: -5px;
-      }
-    
+    } 
 }

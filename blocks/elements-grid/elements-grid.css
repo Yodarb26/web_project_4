@@ -6,7 +6,6 @@
     .elements-grid {
         margin-top: 100px;
     }
-    
 }
 
 @media only screen and (max-width: 320px) {
@@ -14,5 +13,4 @@
         margin: 0 auto;
         padding: 0;
     }
-    
 }
