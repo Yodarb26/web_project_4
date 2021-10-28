@@ -15,7 +15,7 @@ titleInput.value = listTitle.textContent;
 subtitleInput.value = listSubtitle.textContent;
 
 function toggleModal() {
-    modal.classList.toggle("modal__open");
+    modal.classList.toggle("modal__is-open");
 }
 
 function refreshForm(event) {
