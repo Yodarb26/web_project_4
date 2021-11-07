@@ -1,0 +1,14 @@
+.elements-grid__group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 246px;
+  height: 23px;
+  
+  
+  margin: 0;
+    padding: 25px 15px 25px 21px;
+
+}

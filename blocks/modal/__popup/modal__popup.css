@@ -1,7 +1,7 @@
 .modal__popup{
     position: relative;
     margin: auto;
-    padding: 25px 22px;
+    padding: 34px 36px 36px 36px;
     width: 430px;
     height: auto;
     border-radius:10px;
@@ -10,10 +10,12 @@
     background-color: #fff;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .modal__popup {
+        padding: 25px 22px 25px 22px;
         width:100%;
         max-width: 282px;
+        height:322px;
         
     }
 } 

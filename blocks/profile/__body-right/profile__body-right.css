@@ -15,7 +15,7 @@
 }
 
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .profile__body-right {
         width: 282px;
         margin: 36px auto 0 auto;

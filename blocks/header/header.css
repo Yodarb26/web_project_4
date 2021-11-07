@@ -2,23 +2,21 @@
     display: flex;
     width: 100%;
     max-width: 880px;
-    margin: 0 auto;
+    margin: 0 auto 37px auto; 
     padding-top: 45px;
     justify-content: left;
+    border-bottom: 1px solid rgba(84,84,84,0.7);
 }
 
 @media only screen and (max-width: 768px) {
     .header {
-        width: 100%;
         max-width: 680px;
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .header {
-        padding-top: 28px;
-        margin-left: 27px;
-        width: 100%;
-        max-width: 126px;
+        padding-top:28px;
+        max-width: 318px; 
     }
 }

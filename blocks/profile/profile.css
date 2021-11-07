@@ -3,18 +3,15 @@
     padding:0;
     width: 100%;
     max-width: 880px;
-    height: 120px;
     font-family: "Inter", Arial, sans-serif;
     color: white;
     display: flex;
     flex-wrap: wrap;
-    flex-direction:inline-block;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .profile {
         width:282px;
-        height: 286px;
-        margin: 38px auto 20px auto;
+        margin: 38px auto 36px auto;
     }
 }

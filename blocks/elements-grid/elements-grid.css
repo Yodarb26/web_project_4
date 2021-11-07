@@ -4,13 +4,13 @@
    
 @media only screen and (max-width: 768px) {
     .elements-grid {
-        margin-top: 100px;
+        /* margin-top: 100px; */
     }
 }
 
 @media only screen and (max-width: 320px) {
     .elements-grid {
         margin: 0 auto;
-        padding: 36px 0 0 0;
+        padding: 0 0 0 0;
     }
 }

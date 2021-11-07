@@ -6,16 +6,16 @@ const modal = document.querySelector(".modal");
 
 const closeBtn = document.querySelector(".modal__popup-btn");
 
-const form = document.querySelector(".form");
+const form = document.querySelector(".form-name");
 
 const titleInput = document.querySelector("#list-title");
+titleInput.value = listTitle.textContent;
 
 const subtitleInput = document.querySelector("#list-subtitle");
-titleInput.value = listTitle.textContent;
 subtitleInput.value = listSubtitle.textContent;
 
 function toggleModal() {
-    modal.classList.toggle("modal__is_open");
+    modal.classList.toggle("modal__closed");
 }
 
 function refreshForm(event) {

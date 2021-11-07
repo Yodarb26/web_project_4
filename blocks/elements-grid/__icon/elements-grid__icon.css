@@ -1,8 +1,8 @@
 .elements-grid__icon{
-    width:19px;
-    height: 21px;
-    padding: 0;
-    margin:5px 3px 1px 0;
+    width:21px;
+    height: 19px;
+    background: transparent url(../../../images/heart.svg) no-repeat center;
+    border: none;
 }
 
 .elements-grid__icon:hover {

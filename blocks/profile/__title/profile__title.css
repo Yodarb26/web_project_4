@@ -4,8 +4,6 @@
     font-family: "Inter", Arial, sans-serif;
     width: 100%;
     max-width: 373px;
-    height: 39px;
-    font-style: medium;
     font-weight: 500;
     font-size: 42px;
     line-height: 48px;
@@ -20,10 +18,10 @@
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .profile__title {
-        width: 100%;
         max-width:196px;
+        line-height: 22px;
         font-size: 22px;
         padding: 0;
         margin:0 0 0 29px;

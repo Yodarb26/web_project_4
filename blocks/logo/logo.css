@@ -2,12 +2,15 @@
     width:173px;
     height: 33px;
     margin:0;
-    padding: 0;
+    padding: 0 0 41px 0;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .logo {
         width:126px;
         height: 24px;
+        padding-top: 0;
+        padding-bottom: 32px;
+        padding-left: 27px;
     }
 }

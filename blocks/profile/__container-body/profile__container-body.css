@@ -14,10 +14,8 @@
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 325px) {
     .profile__container-body {
         width: 282px;
-        height: 286px;
-        padding: 0 auto;
     }
 }

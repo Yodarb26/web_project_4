@@ -7,7 +7,6 @@
 @import url(../blocks/opacity/opacity.css);
 
 @import url(../blocks/header/header.css);
-@import url(../blocks/header/__separator/header__separator.css);
 @import url(../blocks/logo/logo.css);
 
 @import url(../blocks/profile/profile.css);
@@ -30,12 +29,12 @@
 @import url(../blocks/modal/modal.css);
 @import url(../blocks/modal/__popup/modal__popup.css);
 @import url(../blocks/modal/__popup-btn/modal__popup-btn.css);
-@import url(../blocks/modal/__is_open/modal__is_open.css);
+@import url(../blocks/modal/__closed/modal__closed.css);
 
-@import url(../blocks/form/form.css);
-@import url(../blocks/form/__title/form__title.css);
-@import url(../blocks/form/__input/form__input.css);
-@import url(../blocks/form/__save-button/form__save-button.css);
+@import url(../blocks/form-name/form-name.css);
+@import url(../blocks/form-name/__title/form-name__title.css);
+@import url(../blocks/form-name/__input/form-name__input.css);
+@import url(../blocks/form-name/__save-button/form-name__save-button.css);
 
 @import url(../blocks/elements-grid/elements-grid.css);
 @import url(../blocks/elements-grid/__card/elements-grid__card.css);
@@ -43,6 +42,7 @@
 @import url(../blocks/elements-grid/__text/elements-grid__text.css);
 @import url(../blocks/elements-grid/__image/elements-grid__image.css);
 @import url(../blocks/elements-grid/__icon/elements-grid__icon.css);
+@import url(../blocks/elements-grid/__group/elements-grid__group.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);

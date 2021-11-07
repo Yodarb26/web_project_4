@@ -10,7 +10,6 @@
 
 @media only screen and (max-width: 768px) {
     .profile__text-position {
-        width: 100%;
         max-width: 282px;
     }
 }
