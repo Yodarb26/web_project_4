@@ -5,10 +5,3 @@
     margin: 0 auto;
     height: auto;
   }
-  
-  * {
-    outline: 1px solid red;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-  
