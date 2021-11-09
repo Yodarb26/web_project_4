@@ -1,17 +1,17 @@
-.profile{
+.profile {
     margin: 0;
-    padding:0;
+    padding: 0;
     width: 100%;
     max-width: 880px;
     font-family: "Inter", Arial, sans-serif;
     color: white;
     display: flex;
     flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 325px) {
+  }
+  
+  @media only screen and (max-width: 325px) {
     .profile {
-        width:282px;
-        margin: 38px auto 36px auto;
+      width: 282px;
+      margin: 38px auto 36px auto;
     }
-}
+  }

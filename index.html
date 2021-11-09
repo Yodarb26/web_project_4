@@ -1,125 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="pages/index.css" />
-        <title>Around the U.S</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <title>Around the U.S</title>
+  </head>
 
-    <body class="page">
-        <div class="modal modal__closed">
-            <div class="modal__popup">
-                <button class="modal__popup-btn opacity" type="button"></button>
-                <form class="form-name">
-                    <h2 class="form-name__title">Edit profile</h2>
-                    <input class="form-name__input" type="text" name="list-title" id="list-title" />
-                    <input class="form-name__input" type="text" name="list-subtitle" id="list-subtitle" />
-                    <button class="form-name__save-button">Save</button>
-                </form>
+  <body class="page">
+    <div class="modal modal__closed">
+      <div class="modal__popup">
+        <button class="modal__popup-btn opacity" type="button"></button>
+        <form class="form-name">
+          <h2 class="form-name__title">Edit profile</h2>
+          <input class="form-name__input" type="text" name="list-title" id="list-title" />
+          <input class="form-name__input" type="text" name="list-subtitle" id="list-subtitle" />
+          <button aria-label="Save button" class="form-name__save-button">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="page__wrapper">
+      <header class="header container">
+        <img class="logo" src="./images/logo/Vector.svg" alt="logo" />
+      </header>
+
+      <main>
+        <section class="profile">
+          <div class="profile__container-body">
+            <div class="profile__body-left">
+              <img class="profile__photo" src="images/jcousteau.jpg" alt="Avatar" />
+
+              <div class="profile__edit-container">
+                <div class="profile__button-text">
+                  <h1 class="profile__title">Jacques Cousteau</h1>
+                  <button aria-label="Edit button" class="profile__edit-button opacity" type="button"></button>
+                </div>
+                <p class="profile__subtitle">Explorer</p>
+              </div>
             </div>
-        </div>
-        <div class="page__wrapper">
-            <header class="header container">
-                <img class="logo" src="./images/logo/Vector.svg" alt="logo" />
-            </header>
 
-            <main>
-                <section class="profile">
-                    <div class="profile__container-body">
-                        <div class="profile__body-left">
-                            <img class="profile__photo" src="images/jcousteau.jpg" alt="Avatar" />
+            <div class="profile__body-right">
+              <button aria-label="Plus button" class="profile__plus-button opacity" type="button" alt="Plus button"></button>
+            </div>
+          </div>
+        </section>
 
-                            <!-- <div class="profile__text-position"> -->
-                                <div class="profile__edit-container">
-                                    <div class="profile__button-text">
-                                        <h1 class="profile__title">Jacques Cousteau</h1>
-                                        <button class="profile__edit-button opacity" type="button"></button>
-                                        
-                                    </div>
-                                    <p class="profile__subtitle">Explorer</p>
-                                </div>
-                            <!-- </div> -->
+        <section class="elements-grid">
+          <div class="elements-grid__cards">
+            <div class="elements-grid__card">
+              <img class="elements-grid__image" src="./images/unsplash2.jpg" alt="Yosemite valley" />
 
-                        </div>
+              <div class="elements-grid__group">
+                <h2 class="elements-grid__text">Yosemite valley</h2>
+                <button aria-label="Like button" class="elements-grid__icon" alt="Heart Icon"></button>
+              </div>
+            </div>
 
-                        <div class="profile__body-right">
-                            
-                            <button class="profile__plus-button opacity" type="button" alt="Plus button"></button>
-                        
-                        </div>
-                    </div>
-                </section>
+            <div class="elements-grid__card">
+              <img class="elements-grid__image" src="./images/unsplash2.jpg" alt="Lake Louise" />
+              <div class="elements-grid__group">
+                <h2 class="elements-grid__text">Lake Louise</h2>
+                <button aria-label="Like button" class="elements-grid__icon" alt="Heart Icon"></button>
+              </div>
+            </div>
 
-                <section class="elements-grid">
-                    <div class="elements-grid__cards">
+            <div class="elements-grid__card">
+              <img class="elements-grid__image" src="./images/unsplash3.jpg" alt="Bald Mountains" />
 
-                        <div class="elements-grid__card">
-                            
-                            <img class="elements-grid__image" src="./images/unsplash2.jpg" alt="Yosemite valley" />
-                        
-                            <div class="elements-grid__group"> 
-                            <h2 class="elements-grid__text">Yosemite valley</h2>
-                            <button class="elements-grid__icon" alt="Heart Icon"></button>
-                            </div>
-                        </div>
+              <div class="elements-grid__group">
+                <h2 class="elements-grid__text">Bald Mountains</h2>
+                <button aria-label="Like button" class="elements-grid__icon" alt="Heart Icon"></button>
+              </div>
+            </div>
 
-                        <div class="elements-grid__card">
+            <div class="elements-grid__card">
+              <img class="elements-grid__image" src="./images/unsplash4.jpg" alt="Latemar" />
 
-                            <img class="elements-grid__image" src="./images/unsplash2.jpg" alt="Lake Louise" />
-                            <div class="elements-grid__group"> 
-                            <h2 class="elements-grid__text">Lake Louise</h2>
-                            <button class="elements-grid__icon" alt="Heart Icon"></button>
-                            </div>
-                
-                        </div>
+              <div class="elements-grid__group">
+                <h2 class="elements-grid__text">Latemar</h2>
+                <button aria-label="Like button" class="elements-grid__icon" alt="Heart Icon"></button>
+              </div>
+            </div>
 
-                        <div class="elements-grid__card">
-                            <img class="elements-grid__image" src="./images/unsplash3.jpg" alt="Bald Mountains" />
+            <div class="elements-grid__card">
+              <img class="elements-grid__image" src="./images/unsplash5.jpg" alt="Vanoise National" />
+              <div class="elements-grid__group">
+                <h2 class="elements-grid__text">Vanoise National</h2>
+                <button aria-label="Like button" class="elements-grid__icon" alt="Heart Icon"></button>
+              </div>
+            </div>
 
-                            
-                            <div class="elements-grid__group"> 
-                            <h2 class="elements-grid__text">Bald Mountains</h2>
-                            <button class="elements-grid__icon" alt="Heart Icon"></button>
-                            </div>
-                        
-                        </div>
+            <div class="elements-grid__card">
+              <img class="elements-grid__image" src="./images/unsplash6.jpg" alt="Lago di braies" />
+              <div class="elements-grid__group">
+                <h2 class="elements-grid__text">Lago di braies</h2>
+                <button aria-label="Like button" class="elements-grid__icon" alt="Heart Icon"></button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                        <div class="elements-grid__card">
-                            <img class="elements-grid__image" src="./images/unsplash4.jpg" alt="Latemar" />
-                            
-                            <div class="elements-grid__group"> 
-                            <h2 class="elements-grid__text">Latemar</h2>
-                            <button class="elements-grid__icon" alt="Heart Icon"></button>
-                            </div>
-                        
-                        </div>
-
-                        <div class="elements-grid__card">
-                            <img class="elements-grid__image" src="./images/unsplash5.jpg" alt="Vanoise National" />                       
-                            <div class="elements-grid__group"> 
-                            <h2 class="elements-grid__text">Vanoise National</h2>
-                            <button class="elements-grid__icon" alt="Heart Icon"></button>
-                            </div>
-
-                        </div>
-
-                        <div class="elements-grid__card">
-                            <img class="elements-grid__image" src="./images/unsplash6.jpg" alt="Lago di braies" />                            
-                            <div class="elements-grid__group"> 
-                            <h2 class="elements-grid__text">Lago di braies</h2>
-                            <button class="elements-grid__icon" alt="Heart Icon"></button>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </section>
-
-                <section class="footer">
-                    <p class="footer__copyright">© 2021. Around the US.</p>
-                </section>
-            </main>
-        </div>
-        <script src="./scripts/index.js" type="text/javascript"></script>
-    </body>
+        <section class="footer">
+          <p class="footer__copyright">© 2021. Around the US.</p>
+        </section>
+      </main>
+    </div>
+    <script src="./scripts/index.js" type="text/javascript"></script>
+  </body>
 </html>

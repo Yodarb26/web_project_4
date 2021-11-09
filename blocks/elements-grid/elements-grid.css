@@ -1,16 +1,10 @@
-.elements-grid{
-    padding-top: 50px;    
-}  
-   
-@media only screen and (max-width: 768px) {
-    .elements-grid {
-        /* margin-top: 100px; */
-    }
+.elements-grid {
+  padding-top: 50px;
 }
 
 @media only screen and (max-width: 320px) {
-    .elements-grid {
-        margin: 0 auto;
-        padding: 0 0 0 0;
-    }
+  .elements-grid {
+    margin: 0 auto;
+    padding: 0 0 0 0;
+  }
 }

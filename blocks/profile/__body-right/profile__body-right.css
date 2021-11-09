@@ -1,24 +1,24 @@
-.profile__body-right{
+.profile__body-right {
     display: flex;
-    justify-content:right;
+    justify-content: right;
     vertical-align: bottom;
     width: 150px;
     margin: auto 0 auto auto;
-}
-
-@media only screen and (max-width: 768px) {
+  }
+  
+  @media only screen and (max-width: 768px) {
     .profile__body-right {
-        width: 680px;
-        margin: 0 auto;
-        align-items: center;
+      width: 680px;
+      margin: 0 auto;
+      align-items: center;
     }
-}
-
-
-@media only screen and (max-width: 325px) {
+  }
+  
+  @media only screen and (max-width: 325px) {
     .profile__body-right {
-        width: 282px;
-        margin: 36px auto 0 auto;
-        padding: 0;
+      width: 282px;
+      margin: 36px auto 0 auto;
+      padding: 0;
     }
-}
+  }
+  

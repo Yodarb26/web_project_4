@@ -3,15 +3,13 @@ const listTitle = document.querySelector(".profile__title");
 const listSubtitle = document.querySelector(".profile__subtitle");
 
 const modal = document.querySelector(".modal");
-
 const closeBtn = document.querySelector(".modal__popup-btn");
 
 const form = document.querySelector(".form-name");
-
 const titleInput = document.querySelector("#list-title");
-titleInput.value = listTitle.textContent;
-
 const subtitleInput = document.querySelector("#list-subtitle");
+
+titleInput.value = listTitle.textContent;
 subtitleInput.value = listSubtitle.textContent;
 
 function toggleModal() {

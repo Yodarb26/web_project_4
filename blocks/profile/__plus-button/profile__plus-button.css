@@ -1,29 +1,28 @@
 .profile__plus-button {
     display: flex;
-    width:150px;
+    width: 150px;
     height: 50px;
     background: transparent url(../../../images/plus.svg) no-repeat center;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #ffffff;
     box-sizing: border-box;
     border-radius: 2px;
     text-decoration: none;
     margin: 0;
-    padding:0;
+    padding: 0;
     z-index: 1;
-}
-
-
-@media only screen and (max-width: 768px) {
+  }
+  
+  @media only screen and (max-width: 768px) {
     .profile__plus-button {
-        width:100%;
-        margin: 0 auto;
-        align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      align-items: center;
     }
-}
-
-
-@media only screen and (max-width: 325px) {
+  }
+  
+  @media only screen and (max-width: 325px) {
     .profile__plus-button {
-        width:282px;
+      width: 282px;
     }
-}
+  }
+  

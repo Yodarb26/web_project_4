@@ -1,9 +1,4 @@
-.profile__edit-container{
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width:100%;
-    max-width: 465px; */
+.profile__edit-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -11,11 +6,12 @@
     max-width: 445px;
     margin: 0;
     padding: 0;
-}
-
-@media only screen and (max-width: 768px) {
+  }
+  
+  @media only screen and (max-width: 768px) {
     .profile__edit-container {
-        width:282px;
-        margin: 0 auto;
+      width: 282px;
+      margin: 0 auto;
     }
-}
+  }
+  

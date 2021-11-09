@@ -1,28 +1,27 @@
-.profile__edit-button{
-    display:flex;
-    border: 1px solid #FFFFFF;
+.profile__edit-button {
+    display: flex;
+    border: 1px solid #ffffff;
     box-sizing: border-box;
     background: transparent url(../../../images/pen.svg) no-repeat center;
-    width:24px;
-    height:24px;
+    width: 24px;
+    height: 24px;
     object-fit: cover;
     z-index: 1;
-    margin:40px auto 0 18px;
+    margin: 40px auto 0 18px;
     padding: 0;
     justify-content: center;
-}
-
-
-@media only screen and (max-width: 768px) {
+  }
+  
+  @media only screen and (max-width: 768px) {
     .profile__edit-button {
-        margin:36px auto 0 10px;
+      margin: 36px auto 0 10px;
     }
-}
-
-@media only screen and (max-width: 325px) {
+  }
+  
+  @media only screen and (max-width: 325px) {
     .profile__edit-button {
-        margin:2px auto 0 0px;
-        width:18px;
-        height:18px;
+      margin: 2px auto 0 0px;
+      width: 18px;
+      height: 18px;
     }
-}
+  }

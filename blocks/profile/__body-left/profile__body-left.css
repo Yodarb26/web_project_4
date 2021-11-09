@@ -1,22 +1,23 @@
-.profile__body-left{
+.profile__body-left {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width:100%;
+    width: 100%;
     max-width: 565px;
-}
-
-@media only screen and (max-width: 768px) {
+  }
+  
+  @media only screen and (max-width: 768px) {
     .profile__body-left {
-        max-width: 660px;
-        margin-bottom: 40px;
-        align-items: center;
+      max-width: 660px;
+      margin-bottom: 40px;
+      align-items: center;
     }
-}
-
-@media only screen and (max-width: 325px) {
+  }
+  
+  @media only screen and (max-width: 325px) {
     .profile__body-left {
-        max-width: 282px;
-        margin: 0 auto;
+      max-width: 282px;
+      margin: 0 auto;
     }
-}
+  }
+  
