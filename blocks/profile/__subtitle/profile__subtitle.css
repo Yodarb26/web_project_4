@@ -26,6 +26,7 @@
   @media only screen and (max-width: 450px) {
     .profile__subtitle {
       padding-top: 14px;
+      padding-bottom: 38px;
       font-size: 14px;
       justify-content: center;
     }
