@@ -21,7 +21,7 @@
     }
   }
 
-  @media only screen and (max-width: 325px) {
+  @media only screen and (max-width: 450px) {
     .profile__title {
       max-width: 196px;
       line-height: 22px;

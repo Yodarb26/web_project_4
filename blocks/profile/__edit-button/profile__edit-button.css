@@ -11,14 +11,14 @@
     padding: 0;
     justify-content: center;
   }
-  
+
   @media only screen and (max-width: 768px) {
     .profile__edit-button {
       margin: 36px auto 0 10px;
     }
   }
-  
-  @media only screen and (max-width: 325px) {
+
+  @media only screen and (max-width: 450px) {
     .profile__edit-button {
       margin: 2px auto 0 0px;
       width: 18px;

@@ -8,8 +8,8 @@
     display: flex;
     flex-wrap: wrap;
   }
-  
-  @media only screen and (max-width: 325px) {
+
+  @media only screen and (max-width: 450px) {
     .profile {
       width: 282px;
       margin: 38px auto 36px auto;

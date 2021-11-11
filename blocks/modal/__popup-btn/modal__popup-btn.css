@@ -5,19 +5,18 @@
     top: -40px;
     right: 0;
     text-align: center;
-    margin: 12px -28px 0px 5px;
+    margin: 5px -42px 0px 5px;
+    padding:0;
     border: none;
-    object-fit: cover;
-    /* background: transparent url(../../../images/closeicon40.svg) no-repeat; */
-    background: transparent url(../../../images/closeicon26.svg) no-repeat;
+    object-fit:cover;
+    background: transparent url(../../../images/closeicon.svg) no-repeat;
     cursor: pointer;
   }
 
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 405px) {
     .modal__popup-btn {
       width: 26px;
       height: 26px;
-      background: transparent url(../../../images/closeicon26.svg) no-repeat;
-      margin: 0 10px 13px 5px;
+      margin: 0 5px 13px 5px;
     }
   }
