@@ -9,12 +9,11 @@
     box-sizing: border-box;
     background-color: #fff;
   }
-  
+
   @media only screen and (max-width: 325px) {
     .modal__popup {
       padding: 25px 22px 25px 22px;
       width: 100%;
       max-width: 282px;
-      height: 322px;
     }
   }

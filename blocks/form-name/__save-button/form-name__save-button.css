@@ -1,9 +1,9 @@
 .form-name__save-button {
     display: flex;
     justify-content: center;
-    padding: 18px;
+    padding: 18px 0 13px 0;
     width: 100%;
-    margin: 61.34px auto 0 auto;
+    margin: 48px auto 0 auto;
     border-radius: 2px;
     border: none;
     color: #fff;
@@ -12,17 +12,17 @@
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
   }
-  
+
   .form-name__save-button:hover {
     opacity: 0.8;
     transition: opacity 0.3s ease;
   }
-  
+
   @media only screen and (max-width: 325px) {
     .form-name__save-button {
       max-width: 238px;
       height: 46px;
       margin-top: 45px;
+      padding: 14px 0 14px 0;
     }
   }
-  
