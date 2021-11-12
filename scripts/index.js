@@ -15,6 +15,12 @@ subtitleInput.value = listSubtitle.textContent;
 
 function toggleModal() {
     modal.classList.toggle("modal_closed");
+
+    if(modal.classList.contains('modal_closed')) {
+      modal.classList.remove('modal_closed');
+    } else {
+      modal.classList.add('modal_closed');
+    }
 }
 
 function refreshForm(event) {

@@ -4,7 +4,7 @@
     height: 40px;
     top: -40px;
     right: 0;
-    text-align: center;
+    align-items: center;
     margin: 5px -42px 0px 5px;
     padding:0;
     border: none;
@@ -13,7 +13,7 @@
     cursor: pointer;
   }
 
-  @media only screen and (min-width: 405px) {
+  @media only screen and (max-width: 405px) {
     .modal__popup-btn {
       width: 26px;
       height: 26px;
