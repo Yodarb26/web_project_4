@@ -13,7 +13,7 @@
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 405px) {
+  @media only screen and (max-width: 550px) {
     .modal__popup-btn {
       width: 26px;
       height: 26px;

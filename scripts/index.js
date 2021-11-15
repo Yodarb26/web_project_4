@@ -10,16 +10,15 @@ const form = document.querySelector(".form-name");
 const titleInput = document.querySelector("#list-title");
 const subtitleInput = document.querySelector("#list-subtitle");
 
-titleInput.value = listTitle.textContent;
-subtitleInput.value = listSubtitle.textContent;
+function openModal(){
+  titleInput.value = listTitle.textContent;
+  subtitleInput.value = listSubtitle.textContent;
+  modal.classList.remove('modal_closed');
+}
 
-function toggleModal() {
-    if(modal.classList.contains('modal_closed')) {
-      modal.classList.remove('modal_closed');
-    } else {
+function closeModal() {
       modal.classList.add('modal_closed');
     }
-}
 
 function refreshForm(event) {
     event.preventDefault();
@@ -29,8 +28,8 @@ function refreshForm(event) {
 }
 
 form.addEventListener("submit", refreshForm, false);
-editFormBtn.addEventListener("click", toggleModal, false);
-closeBtn.addEventListener("click", toggleModal, false);
+editFormBtn.addEventListener("click", openModal, false);
+closeBtn.addEventListener("click", closeModal, false);
 saveBtn.addEventListener("click", refreshForm, false);
 
 
