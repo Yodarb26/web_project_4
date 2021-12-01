@@ -81,5 +81,5 @@ const initialCards = [
 ]
 
 initialCards.forEach((cardData) => {
-  renderCard(cardData, '.elements-grid__card');
+  renderCard(cardData);
 })
