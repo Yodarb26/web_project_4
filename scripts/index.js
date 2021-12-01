@@ -2,33 +2,51 @@ const editFormBtn = document.querySelector(".profile__edit-button");
 const listTitle = document.querySelector(".profile__title");
 const listSubtitle = document.querySelector(".profile__subtitle");
 
-const modal = document.querySelector(".modal");
+const editProfileModal = document.querySelector("#edit-profile-popup");
+const addCardModal = document.querySelector("#add-card-popup");
+
 const closeBtn = document.querySelector(".modal__popup-btn");
+const addCardBtn = document.querySelector(".profile__plus-button");
 
 const form = document.querySelector(".form-name");
 const titleInput = document.querySelector("#list-title");
 const subtitleInput = document.querySelector("#list-subtitle");
 
-function openModal(){
+function openModal(editProfileModal){
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
-  modal.classList.remove('modal_closed');
+  editProfileModal.classList.remove('modal_closed');
 }
 
 function closeModal() {
-      modal.classList.add('modal_closed');
+  editProfileModal.classList.add('modal_closed');
     }
 
-function refreshForm(event) {
+function editProfileRefreshForm(event) {
     event.preventDefault();
     listTitle.textContent = titleInput.value;
     listSubtitle.textContent = subtitleInput.value;
-    closeModal();
+    closeModal(editProfileModal);
 }
 
-form.addEventListener("submit", refreshForm, false);
-editFormBtn.addEventListener("click", openModal, false);
+// function refreshForm(event) {
+//   event.preventDefault();
+//   listTitle.textContent = titleInput.value;
+//   listSubtitle.textContent = subtitleInput.value;
+//   closeModal();
+// }
+
+form.addEventListener("submit", editProfileRefreshForm, false);
+editFormBtn.addEventListener("click", () => {
+  openModal(editProfileModal)
+});
+addCardBtn.addEventListener("click", () => {
+  openModal(addCardModal)
+});
+
+
 closeBtn.addEventListener("click", closeModal, false);
+
 
 
 const cardTemplate = document.querySelector("#card-template");
