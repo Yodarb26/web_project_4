@@ -32,10 +32,10 @@
 @import url(../blocks/form-name/__save-button/form-name__save-button.css);
 
 @import url(../blocks/elements-grid/elements-grid.css);
-@import url(../blocks/elements-grid/__card/elements-grid__card.css);
 @import url(../blocks/elements-grid/__cards/elements-grid__cards.css);
-@import url(../blocks/elements-grid/__text/elements-grid__text.css);
+@import url(../blocks/elements-grid/__card/elements-grid__card.css);
 @import url(../blocks/elements-grid/__image/elements-grid__image.css);
+@import url(../blocks/elements-grid/__text/elements-grid__text.css);
 @import url(../blocks/elements-grid/__icon/elements-grid__icon.css);
 @import url(../blocks/elements-grid/__group/elements-grid__group.css);
 
