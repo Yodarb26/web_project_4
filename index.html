@@ -11,7 +11,7 @@
 
         <div class="modal modal_closed" id="edit-profile-popup">
             <div class="modal__popup">
-                <button class="modal__popup-btn opacity" type="button"></button>
+                <button class="modal__popup-btn opacity" type="button" id="close-profile-popup"></button>
                 <form class="form-name" name="edit-profile">
                     <h2 class="form-name__title">Edit profile</h2>
                     <input class="form-name__input" type="text" name="list-title" id="list-title" />
@@ -23,16 +23,23 @@
 
         <div class="modal modal_closed" id="add-card-popup">
             <div class="modal__popup">
-              <button class="modal__popup-btn opacity" type="button"></button>
+              <button class="modal__popup-btn opacity" type="button" id="close-card-popup"></button>
               <form class="form-name" name="add-card">
                   <h2 class="form-name__title">New Place</h2>
-                  <input class="form-name__input" type="text" name="url" placeholder="URL"/>
-                  <input class="form-name__input" type="text" name="title" placeholder="Title"/>
+                  <input class="form-name__input" type="text" name="title" placeholder="Title" id="card-title"/>
+                  <input class="form-name__input" type="text" name="url" placeholder="Image link"id="card-url"/>
                   <button aria-label="Save button" class="form-name__save-button" type="submit">Create</button>
               </form>
             </div>
         </div>
 
+        <div class="modal modal_closed" id="image-popup">
+          <div class="modal__popup modal__popup_type_image">
+            <button class="modal__popup-btn opacity" type="button" id="close-image-popup"></button>
+            <img class="modal__popup-image" src="" alt="">
+            <p class="modal__popup-caption"></p>
+          </div>
+      </div>
 
 
         <div class="page__wrapper">

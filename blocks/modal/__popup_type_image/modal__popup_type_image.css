@@ -1,0 +1,12 @@
+.modal__popup_type_image{
+  background: transparent;
+  position: relative;
+  height: auto;
+  width: auto;
+  max-height: 75vh;
+  max-width: 100vw;
+  background-size: cover;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+}
