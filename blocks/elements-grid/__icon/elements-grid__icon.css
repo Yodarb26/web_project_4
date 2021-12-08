@@ -11,6 +11,7 @@
   }
 
   .elements-grid__icon:active {
-    background: #000000;
-    color: #000000;
+    background: url(../../../images/union.svg) no-repeat center;
   }
+
+

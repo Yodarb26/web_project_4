@@ -79,12 +79,12 @@
 
         <template id="card-template">
           <div class="elements-grid__card">
-            <!-- image added dynamically with JS-->
+            <button aria-label="Like button" class="elements-grid__delete-button" type="button"></button>
             <img class="elements-grid__image" src="" alt="" />
               <div class="elements-grid__group">
-              <!-- text added dynamically with JS-->
                 <h2 class="elements-grid__text"></h2>
-                <button aria-label="Like button" class="elements-grid__icon" type="button"></button>
+                <button aria-label="Like button" class="elements-grid__icon" type="button" id="active-like-button"></button>
+                <!-- <button aria-label="Like button" id="active-like-button" type="button"></button> -->
               </div>
           </div>
         </template>
