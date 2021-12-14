@@ -55,7 +55,7 @@ editFormBtn.addEventListener("click", () => {
 
 form.addEventListener("submit", editCardRefreshForm);
 addCardBtn.addEventListener("click", () => {
-  openModal(addCardModal)
+  openModal(addCardModal);
 });
 
 closeProfileButton.addEventListener("click", closeModal, false);
@@ -78,6 +78,8 @@ function createCard(data) {
 
   deleteCard.addEventListener('click', () => {
     card.remove();
+
+    initialCards.unshift();
   });
 
 
@@ -95,7 +97,6 @@ function createCard(data) {
 
 function addCardToPage(card){
   cardList.prepend(card);
-
 }
 
 function renderCard(data){
@@ -132,4 +133,23 @@ const initialCards = [
 
 initialCards.forEach((cardData) => {
   renderCard(cardData);
-})
+});
+
+////function to add the card
+function cardImagesCards() {
+  let cardsTitle = cardUrl.value;
+  let cardsUrl = cardTitle.value;
+
+  let addImages = `<div class="modal__popup">
+          <button class="modal__popup-btn opacity" type="button" id="close-card-popup"></button>
+          <form class="form-name" name="add-card">
+              <h2 class="form-name__title">New Place</h2>
+              <input class=${cardsTitle} type="text" name="title" placeholder="Title" id="card-title"/>
+              <input class=${cardsUrl} type="text" name="url" placeholder="Image link"id="card-url"/>
+              <button aria-label="Save button" class="form-name__save-button" type="submit">Create</button>
+          </form>
+          </div>`;
+
+          addCardModal.insertAdjacentHTML('beforebegin', addImages );
+
+        };
