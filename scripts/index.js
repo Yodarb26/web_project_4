@@ -78,10 +78,7 @@ function createCard(data) {
 
   deleteCard.addEventListener('click', () => {
     card.remove();
-
-    initialCards.unshift();
   });
-
 
   imageElement.addEventListener('click', () => {
     const modalImageElement = imageModal.querySelector('.modal__popup-image');
@@ -150,6 +147,6 @@ function cardImagesCards() {
           </form>
           </div>`;
 
-          addCardModal.insertAdjacentHTML('beforebegin', addImages );
+          imageModal.insertAdjacentHTML('beforebegin', addImages);
 
         };
