@@ -133,20 +133,26 @@ initialCards.forEach((cardData) => {
 });
 
 ////function to add the card
+const imagesList = document.querySelector(".elements-grid__card");
+
 function cardImagesCards() {
-  let cardsTitle = cardUrl.value;
-  let cardsUrl = cardTitle.value;
 
-  let addImages = `<div class="modal__popup">
-          <button class="modal__popup-btn opacity" type="button" id="close-card-popup"></button>
-          <form class="form-name" name="add-card">
-              <h2 class="form-name__title">New Place</h2>
-              <input class=${cardsTitle} type="text" name="title" placeholder="Title" id="card-title"/>
-              <input class=${cardsUrl} type="text" name="url" placeholder="Image link"id="card-url"/>
-              <button aria-label="Save button" class="form-name__save-button" type="submit">Create</button>
-          </form>
-          </div>`;
+  let addImages = `<div class="elements-grid__card">
+  <button aria-label="Like button" class="elements-grid__delete-button" type="button"></button>
+  <img class="elements-grid__image" src="" alt="" />
+    <div class="elements-grid__group">
+      <h2 class="elements-grid__text">${addImageTitle}</h2>
+      <button aria-label="Like button" class="elements-grid__icon" type="button" id="active-like-button"></button>
+    </div>
+</div>`;
 
-          imageModal.insertAdjacentHTML('beforebegin', addImages);
-
+            cardList.insertAdjacentHTML('beforebegin', addImages, imagesList);
         };
+
+cardImagesForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const addImageCard = document.querySelector(".elements-grid__image");
+  const addImageTitle = document.querySelector(".elements-grid__text");
+  renderCard(addImageCard,addImageTitle);
+
+});
