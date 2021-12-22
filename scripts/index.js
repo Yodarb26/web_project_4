@@ -19,8 +19,12 @@ const form = document.querySelector(".form-name");
 const titleInput = document.querySelector("#list-title");
 const subtitleInput = document.querySelector("#list-subtitle");
 
-const cardUrl = document.querySelector("#card-title");
-const cardTitle = document.querySelector("#card-url");
+// const cardTitle = document.querySelector("#card-title");
+// const cardUrl = document.querySelector("#card-url");
+
+///CreateButton to create cards with new titles and Url's & event listener to be added
+const cardCreateBtn = document.querySelector("form-name__save-button");
+// cardCreateBtn.addEventListener("submit", closeModal, false);
 
 function openModal(editProfileModal){
   titleInput.value = listTitle.textContent;
@@ -58,9 +62,15 @@ addCardBtn.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
+// ///just added
+// cardCreateBtn.addEventListener("click", () => {
+//   openModal(addCardModal);
+// });
+
 closeProfileButton.addEventListener("click", closeModal, false);
 closeCardButton.addEventListener("click", closeModal, false);
 closeImagePreviewButton.addEventListener("click", closeModal, false);
+
 
 function createCard(data) {
   const card = cardTemplate.content.querySelector(".elements-grid__card").cloneNode(true);
@@ -87,6 +97,8 @@ function createCard(data) {
     modalCaption.textContent = data.title;
     openModal(imageModal);
   });
+
+
 
   return card;
 }
@@ -130,29 +142,4 @@ const initialCards = [
 
 initialCards.forEach((cardData) => {
   renderCard(cardData);
-});
-
-////function to add the card
-const imagesList = document.querySelector(".elements-grid__card");
-
-function cardImagesCards() {
-
-  let addImages = `<div class="elements-grid__card">
-  <button aria-label="Like button" class="elements-grid__delete-button" type="button"></button>
-  <img class="elements-grid__image" src="" alt="" />
-    <div class="elements-grid__group">
-      <h2 class="elements-grid__text">${addImageTitle}</h2>
-      <button aria-label="Like button" class="elements-grid__icon" type="button" id="active-like-button"></button>
-    </div>
-</div>`;
-
-            cardList.insertAdjacentHTML('beforebegin', addImages, imagesList);
-        };
-
-cardImagesForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const addImageCard = document.querySelector(".elements-grid__image");
-  const addImageTitle = document.querySelector(".elements-grid__text");
-  renderCard(addImageCard,addImageTitle);
-
 });
