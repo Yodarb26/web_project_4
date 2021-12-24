@@ -3,18 +3,14 @@
   width:auto;
   height:auto;
   margin: 0 auto;
-  display: flex;
   max-width: 75vw;
   max-height: 75vh;
   padding:0;
   background:none;
   object-fit: contain;
-  height: 540px;
   left: 424px;
   right: 423px;
   top: 90px;
-  margin: 0 auto;
-  object-fit:cover;
 }
 
 @media only screen and (max-width: 330px) {
