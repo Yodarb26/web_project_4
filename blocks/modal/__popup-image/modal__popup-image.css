@@ -1,6 +1,5 @@
 .modal__popup-image {
-
-  /* display: flex;
+  display: flex;
   width:auto;
   height:auto;
   margin: 0 auto;
@@ -9,23 +8,14 @@
   max-height: 75vh;
   padding:0;
   background:none;
-  object-fit: contain; */
-
-
-/* height: 540px;
-left: 424px;
-right: 423px;
-top: 90px;
-margin: 0 auto;
-object-fit:cover; */
-
+  object-fit: contain;
+  height: 540px;
+  left: 424px;
+  right: 423px;
+  top: 90px;
+  margin: 0 auto;
+  object-fit:cover;
 }
-
-/* #modal__popup-image{
-  padding:0;
-  background:none;
-  object-fit: cover;
-} */
 
 @media only screen and (max-width: 330px) {
   .modal__popup-image {
