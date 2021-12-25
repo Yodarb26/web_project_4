@@ -31,13 +31,13 @@ const modalCaption = imageModal.querySelector(".modal__popup-caption");
 function openModal(editProfileModal) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
-  editProfileModal.classList.remove("modal_closed");
+  editProfileModal.classList.remove("modal_opened");
 }
 
 function closeModal() {
-  editProfileModal.classList.add("modal_closed");
-  addCardModal.classList.add("modal_closed");
-  imageModal.classList.add("modal_closed");
+  editProfileModal.classList.add("modal_opened");
+  addCardModal.classList.add("modal_opened");
+  imageModal.classList.add("modal_opened");
 }
 
 function editProfileRefreshForm(event) {
@@ -54,6 +54,7 @@ function editCardRefreshForm(evt) {
     url: cardUrlInput.value,
   };
   renderCard(data);
+  evt.target.reset(data);
 }
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
@@ -83,6 +84,7 @@ function createCard(data) {
   });
 
   imageElement.src = data.url;
+  imageElement.alt = data.alt;
   titleElement.textContent = data.title;
 
   deleteCard.addEventListener("click", () => {
@@ -92,6 +94,7 @@ function createCard(data) {
   imageElement.addEventListener("click", () => {
     modalImageElement.src = data.url;
     modalCaption.textContent = data.title;
+    modalImageElement.alt = data.alt;
     openModal(imageModal);
   });
 
