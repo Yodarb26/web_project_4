@@ -3,6 +3,7 @@ const closeProfileButton = document.querySelector("#close-profile-popup");
 const closeCardButton = document.querySelector("#close-card-popup");
 const closeImagePreviewButton = document.querySelector("#close-image-popup");
 const addCardBtn = document.querySelector(".profile__plus-button");
+const cardCreateBtn = document.querySelector("#create-card-button");
 
 const listTitle = document.querySelector(".profile__title");
 const listSubtitle = document.querySelector(".profile__subtitle");
@@ -24,7 +25,8 @@ const subtitleInput = document.querySelector("#list-subtitle");
 const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
 
-const cardCreateBtn = document.querySelector("#create-card-button");
+const modalImageElement = imageModal.querySelector(".modal__popup-image");
+const modalCaption = imageModal.querySelector(".modal__popup-caption");
 
 function openModal(editProfileModal) {
   titleInput.value = listTitle.textContent;
@@ -67,7 +69,7 @@ addCardBtn.addEventListener("click", () => {
 closeProfileButton.addEventListener("click", closeModal, false);
 closeCardButton.addEventListener("click", closeModal, false);
 closeImagePreviewButton.addEventListener("click", closeModal, false);
-cardCreateBtn.addEventListener("submit", closeModal, false);
+cardCreateBtn.addEventListener("click", closeModal, false);
 
 function createCard(data) {
   const card = cardTemplate.content.querySelector(".elements-grid__card").cloneNode(true);
@@ -88,9 +90,7 @@ function createCard(data) {
   });
 
   imageElement.addEventListener("click", () => {
-    const modalImageElement = imageModal.querySelector(".modal__popup-image");
     modalImageElement.src = data.url;
-    const modalCaption = imageModal.querySelector(".modal__popup-caption");
     modalCaption.textContent = data.title;
     openModal(imageModal);
   });
@@ -133,6 +133,5 @@ const initialCards = [
   },
 ];
 
-initialCards.forEach((cardData) => {
-  renderCard(cardData);
-});
+initialCards.forEach(renderCard);
+
