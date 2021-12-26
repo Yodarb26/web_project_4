@@ -28,16 +28,24 @@ const cardUrlInput = document.querySelector("#card-url");
 const modalImageElement = imageModal.querySelector(".modal__popup-image");
 const modalCaption = imageModal.querySelector(".modal__popup-caption");
 
+function openPopup(popup) {
+  popup.classList.remove('modal_opened');
+}
+
+function closePopup(popup) {
+  popup.classList.add('modal_opened');
+}
+
 function openModal(editProfileModal) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
-  editProfileModal.classList.remove("modal_opened");
+  openPopup(editProfileModal);
 }
 
 function closeModal() {
-  editProfileModal.classList.add("modal_opened");
-  addCardModal.classList.add("modal_opened");
-  imageModal.classList.add("modal_opened");
+  closePopup(editProfileModal);
+  closePopup(addCardModal);
+  closePopup(imageModal);
 }
 
 function editProfileRefreshForm(event) {
@@ -137,4 +145,3 @@ const initialCards = [
 ];
 
 initialCards.forEach(renderCard);
-
