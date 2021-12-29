@@ -42,17 +42,11 @@ function openModal(editProfileModal) {
   openPopup(editProfileModal);
 }
 
-function closeModal() {
-  closePopup(editProfileModal);
-  closePopup(addCardModal);
-  closePopup(imageModal);
-}
-
 function editProfileRefreshForm(event) {
   event.preventDefault();
   listTitle.textContent = titleInput.value;
   listSubtitle.textContent = subtitleInput.value;
-  closeModal(editProfileModal);
+  closePopup(editProfileModal);
 }
 
 function editCardRefreshForm(evt) {
@@ -63,6 +57,7 @@ function editCardRefreshForm(evt) {
   };
   renderCard(data);
   evt.target.reset(data);
+  closePopup();
 }
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
@@ -75,10 +70,9 @@ addCardBtn.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
-closeProfileButton.addEventListener("click", closeModal, false);
-closeCardButton.addEventListener("click", closeModal, false);
-closeImagePreviewButton.addEventListener("click", closeModal, false);
-cardCreateBtn.addEventListener("click", closeModal, false);
+closeProfileButton.addEventListener("click", () =>  closePopup(editProfileModal));
+closeCardButton.addEventListener("click", () =>  closePopup(addCardModal));
+closeImagePreviewButton.addEventListener("click", () =>  closePopup(imageModal));
 
 function createCard(data) {
   const card = cardTemplate.content.querySelector(".elements-grid__card").cloneNode(true);
