@@ -57,7 +57,7 @@ function editCardRefreshForm(evt) {
   };
   renderCard(data);
   evt.target.reset(data);
-  closePopup();
+  closePopup(addCardModal);
 }
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
