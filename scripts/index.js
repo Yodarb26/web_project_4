@@ -29,11 +29,11 @@ const modalImageElement = imageModal.querySelector(".modal__popup-image");
 const modalCaption = imageModal.querySelector(".modal__popup-caption");
 
 function openPopup(popup) {
-  popup.classList.remove('modal_opened');
+  popup.classList.add('modal_opened');
 }
 
 function closePopup(popup) {
-  popup.classList.add('modal_opened');
+  popup.classList.remove('modal_opened');
 }
 
 function openModal(editProfileModal) {
