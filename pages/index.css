@@ -28,7 +28,7 @@
 @import url(../blocks/modal/__popup-caption/modal__popup-caption.css);
 @import url(../blocks/modal/__popup-image/modal__popup-image.css);
 @import url(../blocks/modal/__popup_type_image/modal__popup_type_image.css);
-@import url(../blocks/modal/__popup__button_disabled/modal__popup__button_disabled.css);
+@import url(../blocks/modal/__popup-button_disabled/modal__popup-button_disabled.css);
 @import url(../blocks/modal/__popup__error_visible/modal__popup__error_visible.css);
 @import url(../blocks/modal/__popup-input_type_error/modal__popup-input_type_error.css);
 
