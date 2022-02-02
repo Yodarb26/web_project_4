@@ -1,4 +1,4 @@
-.modal__popup__button_disabled:disabled{
+.modal__popup-button_disabled:disabled{
   opacity: 0.2;
   border: 1px solid #000000;
   box-sizing: border-box;
