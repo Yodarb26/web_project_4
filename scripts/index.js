@@ -8,7 +8,7 @@ const cardCreateBtn = document.querySelector("#create-card-button");
 const listTitle = document.querySelector(".profile__title");
 const listSubtitle = document.querySelector(".profile__subtitle");
 
-const editProfileModal = document.querySelector("#edit-profile-popup");
+const editProfileModal = document.querySelector("#edit-profile-popup");//.popup__form
 const addCardModal = document.querySelector("#add-card-popup");
 const imageModal = document.querySelector("#image-popup");
 
@@ -58,7 +58,11 @@ function editCardRefreshForm(evt) {
   renderCard(data);
   evt.target.reset(data);
   closePopup(addCardModal);
-}
+  resetForm(e.target, {
+    submitButtonSelector: ".form-name__save-button",
+    inactiveButtonClass: "modal__popup__button_disabled",
+    });
+};
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
 editFormBtn.addEventListener("click", () => {
