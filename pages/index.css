@@ -27,9 +27,13 @@
 @import url(../blocks/modal/_opened/modal_opened.css);
 @import url(../blocks/modal/__popup-caption/modal__popup-caption.css);
 @import url(../blocks/modal/__popup-image/modal__popup-image.css);
+
 @import url(../blocks/modal/__popup_type/_image/modal__popup_type_image.css);
+
 @import url(../blocks/modal/__popup-button/_disabled/modal__popup-button_disabled.css);
+
 @import url(../blocks/modal/__popup__error/_visible/modal__popup__error_visible.css);
+
 @import url(../blocks/modal/__popup-input/_type/modal__popup-input_type_error.css);
 
 @import url(../blocks/form-name/form-name.css);
