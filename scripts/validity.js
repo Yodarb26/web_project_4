@@ -125,7 +125,6 @@ window.addEventListener('keydown', function (event) {
 enableValidation({
   formSelector: ".form-name",
   inputSelector: ".form-name__input",
-  errorTextSelector:"popup__error_text",
   submitButtonSelector: ".form-name__save-button",
   inactiveButtonClass: "modal__popup__button_disabled",
   inputErrorClass: "modal__popup__input_type_error",
