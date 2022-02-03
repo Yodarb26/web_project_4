@@ -1,8 +1,11 @@
-.modal__popup__button_disabled:disabled{
-  opacity: 0.2;
+.form-name__save-button_disabled{
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 2px;
   color: #000000;
   background:white;
+}
+
+.form-name__save-button_disabled:disabled{
+  opacity: 0.2;
 }
