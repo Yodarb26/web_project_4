@@ -60,7 +60,7 @@ function editCardRefreshForm(evt) {
   closePopup(addCardModal);
   resetForm(e.target, {
     submitButtonSelector: ".form-name__save-button",
-    inactiveButtonClass: "modal__popup__button_disabled",
+    inactiveButtonClass: "form-name__save-button_disabled",
     });
 };
 

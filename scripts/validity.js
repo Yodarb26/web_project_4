@@ -127,7 +127,7 @@ enableValidation({
   inputSelector: ".form-name__input",
   submitButtonSelector: ".form-name__save-button",
   inactiveButtonClass: "form-name__save-button_disabled",
-  inputErrorClass: "form-name__input_type_error",
+  inputErrorClass: "form-name__modal_type_error",
   errorClass: "modal__popup__error_visible",
 });
 
