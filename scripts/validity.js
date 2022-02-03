@@ -126,13 +126,8 @@ enableValidation({
   formSelector: ".form-name",
   inputSelector: ".form-name__input",
   submitButtonSelector: ".form-name__save-button",
-<<<<<<< HEAD
   inactiveButtonClass: "form-name__save-button_disabled",
   inputErrorClass: "form-name__input_type_error",
-=======
-  inactiveButtonClass: "modal__popup-button_disabled",
-  inputErrorClass: "modal__popup-input_type_error",
->>>>>>> 322f2a7f46cca534fb63066efddb8f99ca8d2ad7
   errorClass: "modal__popup__error_visible",
 });
 

@@ -1,9 +1,4 @@
-<<<<<<< HEAD:blocks/form-name/__save-button/_disabled/form-name__save-button_disabled.css
 .form-name__save-button_disabled{
-=======
-.modal__popup-button_disabled:disabled{
-  opacity: 0.2;
->>>>>>> 322f2a7f46cca534fb63066efddb8f99ca8d2ad7:blocks/modal/__popup-button/_disabled/ modal__popup-button_disabled.css
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 2px;
