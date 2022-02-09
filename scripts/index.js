@@ -29,17 +29,34 @@ const modalImageElement = imageModal.querySelector(".modal__popup-image");
 const modalCaption = imageModal.querySelector(".modal__popup-caption");
 
 function openPopup(popup) {
-  popup.classList.add('modal_opened');
+  popup.classList.add("modal_opened");
+  popup.addEventListener('click', clickOutsideOverlay);
+  document.addEventListener("keydown",pressEscKey);
 }
 
 function closePopup(popup) {
-  popup.classList.remove('modal_opened');
+  popup.classList.remove("modal_opened");
+  popup.removeEventListener("click", clickOutsideOverlay);
+  document.removeEventListener("keydown",pressEscKey);
 }
 
 function openModal(editProfileModal) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
   openPopup(editProfileModal);
+}
+
+function clickOutsideOverlay(e){
+    if(e.target.classList.contains("modal")){
+      closePopup(document.querySelector(".modal_opened"));
+      closePopup(e.target);
+    }
+}
+
+function pressEscKey(e){
+  if(e.key === "Escape"){
+    closePopup(document.querySelector(".modal_opened"));
+  }
 }
 
 function editProfileRefreshForm(event) {
@@ -58,7 +75,7 @@ function editCardRefreshForm(evt) {
   renderCard(data);
   evt.target.reset(data);
   closePopup(addCardModal);
-  resetForm(e.target, {
+  resetForm(evt.target, {
     submitButtonSelector: ".form-name__save-button",
     inactiveButtonClass: "form-name__save-button_disabled",
     });
@@ -143,3 +160,4 @@ const initialCards = [
 ];
 
 initialCards.forEach(renderCard);
+

@@ -36,7 +36,7 @@
 @import url(../blocks/form-name/__input-error/form-name__input-error.css);
 @import url(../blocks/form-name/__save-button/form-name__save-button.css);
 @import url(../blocks/form-name/__save-button/_disabled/form-name__save-button_disabled.css);
-@import url(../blocks/form-name/__modal/form-name__modal.css);
+@import url(../blocks/form-name/__modal-type/form-name__modal-type.css);
 @import url(../blocks/form-name/__modal-type/_error/form-name__modal-type_error.css);
 
 @import url(../blocks/elements-grid/elements-grid.css);

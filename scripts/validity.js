@@ -8,8 +8,8 @@ function showError(errorEl, inputEl, settings) {
   inputEl.classList.add(settings.inputErrorClass);
 }
 
-function showErrorStyle(input){
-  input.classList.add('form-name__input-error');
+function showErrorStyle(settings){
+  settings.classList.add('form-name__input-error');
 }
 
 function hideErrorStyle(input){
@@ -66,7 +66,6 @@ function enableValidation(settings){
     formEl.addEventListener('submit', (e) => {
       e.preventDefault();
     });
-
     setEventListeners(formEl, settings);
   });
 }
@@ -77,50 +76,6 @@ function resetForm(formEl, inactiveButtonClass) {
   buttonEl.classList.add(settings.inactiveButtonClass);
   formEl.reset();
 }
-
-function closeImageOverlay(e){
-    if(e.target === closeImageModal){
-      closeImageModal.style.display = "none";
-    } else {
-      closeImageModal.style.display = " ";
-    }
-}
-
-function closeProfileOverlay(e){
-  if(e.target === closeProfileModal){
-    closeProfileModal.style.display = "none";
-  } else {
-    closeProfileModal.style.display = " ";
-  }
-}
-
-function closeCardOverlay(e){
-    if(e.target === closeCardModal){
-      closeCardModal.style.display = "none";
-    } else {
-      closeCardModal.style.display = " ";
-    }
-};
-
-function overlay(e){
-  closeImageOverlay(e);
-  closeProfileOverlay(e);
-  closeCardOverlay(e);
-};
-
-window.addEventListener('click', overlay, false);
-
-window.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    closeCardModal.style.display = 'none';
-    closeProfileModal.style.display = 'none';
-    closeImageModal.style.display = 'none';
-  } else {
-    closeImageModal.style.display = " ";
-    closeProfileModal.style.display = " ";
-    closeCardModal.style.display = " ";
-  }
-});
 
 enableValidation({
   formSelector: ".form-name",
