@@ -8,12 +8,20 @@ function showError(errorEl, inputEl, settings) {
   inputEl.classList.add(settings.inputErrorClass);
 }
 
+
+///can't figure out yet
 function showErrorStyle(settings){
-  settings.classList.add('form-name__input-error');
+  // settings.classList.add('form-name__input-error');
+  // enableValidation(settings)
+  settings.classList.add(enableValidation(settings));
 }
 
+///can't figure out yet
 function hideErrorStyle(input){
-  input.classList.remove('form-name__input-error');
+  // input.classList.remove('form-name__input-error');
+  // enableValidation(input);
+  input.classList.remove(enableValidation(input));
+
 }
 
 function isInvalidInput(inputEl) {
@@ -48,7 +56,7 @@ function toggleButton(inputList, buttonEl, settings) {
   }
 }
 
-function setEventListeners(formEl, settings) {
+function setEventListeners(formEl, settings){
   const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
   const buttonEl =  formEl.querySelector(settings.submitButtonSelector);
 
@@ -62,6 +70,7 @@ function setEventListeners(formEl, settings) {
 
 function enableValidation(settings){
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
+
   formList.forEach((formEl) => {
     formEl.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -70,7 +79,7 @@ function enableValidation(settings){
   });
 }
 
-function resetForm(formEl, inactiveButtonClass) {
+function resetForm(formEl, settings) {
   const buttonEl = formEl.querySelector(settings.submitButtonSelector);
   buttonEl.disabled = true;
   buttonEl.classList.add(settings.inactiveButtonClass);

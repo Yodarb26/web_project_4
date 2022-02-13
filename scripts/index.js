@@ -48,7 +48,6 @@ function openModal(editProfileModal) {
 
 function clickOutsideOverlay(e){
     if(e.target.classList.contains("modal")){
-      closePopup(document.querySelector(".modal_opened"));
       closePopup(e.target);
     }
 }
@@ -75,10 +74,12 @@ function editCardRefreshForm(evt) {
   renderCard(data);
   evt.target.reset(data);
   closePopup(addCardModal);
-  resetForm(evt.target, {
+  resetForm(
+    evt.target, {
     submitButtonSelector: ".form-name__save-button",
     inactiveButtonClass: "form-name__save-button_disabled",
     });
+    // debugger;
 };
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
