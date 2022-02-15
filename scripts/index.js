@@ -79,7 +79,6 @@ function editCardRefreshForm(evt) {
     submitButtonSelector: ".form-name__save-button",
     inactiveButtonClass: "form-name__save-button_disabled",
     });
-    // debugger;
 };
 
 formProfile.addEventListener("submit", editProfileRefreshForm);

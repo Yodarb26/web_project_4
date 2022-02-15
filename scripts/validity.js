@@ -1,27 +1,15 @@
-// const closeCardModal = formCard;
-// const closeProfileModal = openProfilePopup;
-// const closeImageModal = imagePopup;
-
 function showError(errorEl, inputEl, settings) {
   errorEl.classList.add(settings.errorClass);
   errorEl.textContent = inputEl.validationMessage;
   inputEl.classList.add(settings.inputErrorClass);
 }
 
-
-///can't figure out yet
 function showErrorStyle(settings){
-  // settings.classList.add('form-name__input-error');
-  // enableValidation(settings)
   settings.classList.add(enableValidation(settings));
 }
 
-///can't figure out yet
 function hideErrorStyle(input){
-  // input.classList.remove('form-name__input-error');
-  // enableValidation(input);
   input.classList.remove(enableValidation(input));
-
 }
 
 function isInvalidInput(inputEl) {
