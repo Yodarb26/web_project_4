@@ -8,7 +8,7 @@ const cardCreateBtn = document.querySelector("#create-card-button");
 const listTitle = document.querySelector(".profile__title");
 const listSubtitle = document.querySelector(".profile__subtitle");
 
-const openProfilePopup= document.querySelector("#edit-profile-popup");//.popup__form
+const profilePopup= document.querySelector("#edit-profile-popup");//.popup__form
 const addCardPopup = document.querySelector("#add-card-popup");
 const imagePopup = document.querySelector("#image-popup");
 
@@ -40,10 +40,10 @@ function closePopup(popup) {
   document.removeEventListener("keydown",pressEscKey);
 }
 
-function openModalPopup(openProfilePopup) {
+function openProfilePopup(profilePopup) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
-  openPopup(openProfilePopup);
+  openPopup(profilePopup);
 }
 
 function clickOutsideOverlay(e){
@@ -62,7 +62,7 @@ function editProfileRefreshForm(event) {
   event.preventDefault();
   listTitle.textContent = titleInput.value;
   listSubtitle.textContent = subtitleInput.value;
-  closePopup(openProfilePopup);
+  closePopup(profilePopup);
 }
 
 function editCardRefreshForm(evt) {
@@ -83,15 +83,15 @@ function editCardRefreshForm(evt) {
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
 editFormBtn.addEventListener("click", () => {
-  openModalPopup(openProfilePopup);
+  openProfilePopup(profilePopup);
 });
 
 formCard.addEventListener("submit", editCardRefreshForm);
 addCardBtn.addEventListener("click", () => {
-  openModalPopup(addCardPopup);
+  openProfilePopup(addCardPopup);
 });
 
-closeProfileButton.addEventListener("click", () =>  closePopup(openProfilePopup));
+closeProfileButton.addEventListener("click", () =>  closePopup(profilePopup));
 closeCardButton.addEventListener("click", () =>  closePopup(addCardPopup));
 closeImagePreviewButton.addEventListener("click", () =>  closePopup(imagePopup));
 
@@ -118,7 +118,7 @@ function createCard(data) {
     modalImageElement.src = data.url;
     modalCaption.textContent = data.title;
     modalImageElement.alt = data.alt;
-    openModalPopup(imagePopup);
+    openProfilePopup(imagePopup);
   });
 
   return card;

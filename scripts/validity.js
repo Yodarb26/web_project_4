@@ -4,14 +4,6 @@ function showError(errorEl, inputEl, settings) {
   inputEl.classList.add(settings.inputErrorClass);
 }
 
-function showErrorStyle(settings){
-  settings.classList.add(enableValidation(settings));
-}
-
-function hideErrorStyle(input){
-  input.classList.remove(enableValidation(input));
-}
-
 function isInvalidInput(inputEl) {
     return !inputEl.validity.valid;
 }
@@ -27,10 +19,8 @@ function checkInputValidity(inputEl, formEl, settings) {
 
   if(isInvalidInput(inputEl)) {
     showError(errorEl, inputEl, settings);
-    showErrorStyle(inputEl, settings);
   } else {
     hideError(errorEl, inputEl, settings);
-    hideErrorStyle(inputEl, settings);
   };
 }
 
