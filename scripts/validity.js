@@ -1,6 +1,6 @@
-const closeCardModal = formCard;
-const closeProfileModal = editProfileModal;
-const closeImageModal = imageModal;
+// const closeCardModal = formCard;
+// const closeProfileModal = openProfilePopup;
+// const closeImageModal = imagePopup;
 
 function showError(errorEl, inputEl, settings) {
   errorEl.classList.add(settings.errorClass);
