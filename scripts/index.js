@@ -40,10 +40,10 @@ function closePopup(popup) {
   document.removeEventListener("keydown",pressEscKey);
 }
 
-function openProfilePopup() {
+function openProfilePopup(popup) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
-  openPopup();
+  openPopup(popup);
 }
 
 function clickOutsideOverlay(e){
