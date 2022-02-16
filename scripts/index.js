@@ -40,6 +40,7 @@ function closePopup(popup) {
   document.removeEventListener("keydown",pressEscKey);
 }
 
+//What was recommended on the feedback doesn't work for some reason if i remove profilePopup fromm its function as it doesn't open the image anymore but "edit profile" instead
 function openProfilePopup(profilePopup) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
@@ -88,7 +89,7 @@ editFormBtn.addEventListener("click", () => {
 
 formCard.addEventListener("submit", editCardRefreshForm);
 addCardBtn.addEventListener("click", () => {
-  openProfilePopup(addCardPopup);
+  openPopup(addCardPopup);
 });
 
 closeProfileButton.addEventListener("click", () =>  closePopup(profilePopup));

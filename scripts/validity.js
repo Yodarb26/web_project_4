@@ -19,8 +19,10 @@ function checkInputValidity(inputEl, formEl, settings) {
 
   if(isInvalidInput(inputEl)) {
     showError(errorEl, inputEl, settings);
+    // showErrorStyle(inputEl, settings);
   } else {
     hideError(errorEl, inputEl, settings);
+    // hideErrorStyle(inputEl, settings);
   };
 }
 
