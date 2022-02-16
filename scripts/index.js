@@ -40,11 +40,10 @@ function closePopup(popup) {
   document.removeEventListener("keydown",pressEscKey);
 }
 
-//What was recommended on the feedback doesn't work for some reason if i remove profilePopup fromm its function as it doesn't open the image anymore but "edit profile" instead
-function openProfilePopup(profilePopup) {
+function openProfilePopup() {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
-  openPopup(profilePopup);
+  openPopup();
 }
 
 function clickOutsideOverlay(e){
