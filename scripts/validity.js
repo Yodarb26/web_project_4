@@ -1,63 +1,66 @@
-function showError(errorEl, inputEl, settings) {
-  errorEl.classList.add(settings.errorClass);
-  errorEl.textContent = inputEl.validationMessage;
-  inputEl.classList.add(settings.inputErrorClass);
-}
+//FORMVALIDATOR
+import FormValidator from "./FormValidator.js"
 
-function isInvalidInput(inputEl) {
-    return !inputEl.validity.valid;
-}
+// function showError(errorEl, inputEl, settings) {
+//   errorEl.classList.add(settings.errorClass);
+//   errorEl.textContent = inputEl.validationMessage;
+//   inputEl.classList.add(settings.inputErrorClass);
+// }
 
-function hideError(errorEl, inputEl, settings) {
-  errorEl.classList.remove(settings.errorClass);
-  errorEl.textContent = '';
-  inputEl.classList.remove(settings.inputErrorClass);
-}
+// function isInvalidInput(inputEl) {
+//     return !inputEl.validity.valid;
+// }
 
-function checkInputValidity(inputEl, formEl, settings) {
-  const errorEl = formEl.querySelector(`#${inputEl.id}-error`);
+// function hideError(errorEl, inputEl, settings) {
+//   errorEl.classList.remove(settings.errorClass);
+//   errorEl.textContent = '';
+//   inputEl.classList.remove(settings.inputErrorClass);
+// }
 
-  if(isInvalidInput(inputEl)) {
-    showError(errorEl, inputEl, settings);
-    // showErrorStyle(inputEl, settings);
-  } else {
-    hideError(errorEl, inputEl, settings);
-    // hideErrorStyle(inputEl, settings);
-  };
-}
+// function checkInputValidity(inputEl, formEl, settings) {
+//   const errorEl = formEl.querySelector(`#${inputEl.id}-error`);
 
-function toggleButton(inputList, buttonEl, settings) {
-  if (inputList.some(isInvalidInput)) {
-      buttonEl.disabled = true;
-      buttonEl.classList.add(settings.inactiveButtonClass);
-  } else {
-      buttonEl.disabled = false;
-      buttonEl.classList.remove(settings.inactiveButtonClass);
-  }
-}
+//   if(isInvalidInput(inputEl)) {
+//     showError(errorEl, inputEl, settings);
+//     // showErrorStyle(inputEl, settings);
+//   } else {
+//     hideError(errorEl, inputEl, settings);
+//     // hideErrorStyle(inputEl, settings);
+//   };
+// }
 
-function setEventListeners(formEl, settings){
-  const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
-  const buttonEl =  formEl.querySelector(settings.submitButtonSelector);
+// function toggleButton(inputList, buttonEl, settings) {
+//   if (inputList.some(isInvalidInput)) {
+//       buttonEl.disabled = true;
+//       buttonEl.classList.add(settings.inactiveButtonClass);
+//   } else {
+//       buttonEl.disabled = false;
+//       buttonEl.classList.remove(settings.inactiveButtonClass);
+//   }
+// }
 
-  inputList.forEach((inputEl) => {
-    inputEl.addEventListener('input', () => {
-        checkInputValidity(inputEl, formEl, settings);
-        toggleButton(inputList, buttonEl, settings);
-    });
-  });
-}
+// function setEventListeners(formEl, settings){
+//   const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
+//   const buttonEl =  formEl.querySelector(settings.submitButtonSelector);
 
-function enableValidation(settings){
-  const formList = Array.from(document.querySelectorAll(settings.formSelector));
+//   inputList.forEach((inputEl) => {
+//     inputEl.addEventListener('input', () => {
+//         checkInputValidity(inputEl, formEl, settings);
+//         toggleButton(inputList, buttonEl, settings);
+//     });
+//   });
+// }
 
-  formList.forEach((formEl) => {
-    formEl.addEventListener('submit', (e) => {
-      e.preventDefault();
-    });
-    setEventListeners(formEl, settings);
-  });
-}
+// function enableValidation(settings){
+//   const formList = Array.from(document.querySelectorAll(settings.formSelector));
+
+//   formList.forEach((formEl) => {
+//     formEl.addEventListener('submit', (e) => {
+//       e.preventDefault();
+//     });
+//     setEventListeners(formEl, settings);
+//   });
+// }
 
 function resetForm(formEl, settings) {
   const buttonEl = formEl.querySelector(settings.submitButtonSelector);

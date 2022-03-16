@@ -1,3 +1,8 @@
+//CARD
+
+import FormValidator from './FormValidator.js';
+// console.log(FormValidator);
+
 const editFormBtn = document.querySelector(".profile__edit-button");
 const closeProfileButton = document.querySelector("#close-profile-popup");
 const closeCardButton = document.querySelector("#close-card-popup");
@@ -161,3 +166,25 @@ const initialCards = [
 
 initialCards.forEach(renderCard);
 
+//validation + form
+const addFormEl = formCard.querySelector(".form-name");
+const editFormEl = formProfile.querySelector(".form-name");
+
+const formValidatorConfig = {
+    inputSelector: ".form-name__input",
+    submitButtonSelector: ".form-name__save-button",
+    inactiveButtonClass: "form-name__save-button_disabled",
+    inputErrorClass: "form-name__modal-type_error",
+    errorClass: "modal__popup__error_visible",
+  }
+
+  const addFormValidator =  new FormValidator(formValidatorConfig, addFormEl);
+  addFormValidator.enableValidation();
+
+  const editFormValidator =  new FormValidator(formValidatorConfig, editFormEl);
+  editFormValidator.enableValidation();
+
+// const addformValidator = new FormValidator(formValidatorConfig)
+
+
+// console.log(addFormEl, editFormEl);
