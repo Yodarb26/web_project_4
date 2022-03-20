@@ -46,12 +46,13 @@ class FormValidator{
     errorEl.classList.remove(this._errorClass);
   }
 
-  _setEventListeners(inputList, buttonEl){
-    // const inputList = this._formEl.querySelectorAll(this._inputSelector);
-    // const buttonEl =  this._formEl.querySelector(this._submitButtonSelector);
+  _setEventListeners(){
+    const inputList = this._formEl.querySelectorAll(this._inputSelector);
+    const buttonEl =  this._formEl.querySelector(this._submitButtonSelector);
+
       inputList.forEach((inputEl) => {
-        this._inputEl.addEventListener('input', () => {
-          checkInputValidity(inputEl, formEl, settings);
+        inputEl.addEventListener('input', () => {
+          formElcheckInputValidity(inputEl, formEl, settings);
           toggleButton(inputList, buttonEl, settings);
       });
     });
@@ -61,7 +62,7 @@ class FormValidator{
     this._formEl.addEventListener('submit', (e) => {
       e.preventDefault();
     });
-    this._setEventListeners();
+    this._setEventListeners(this._inputList);
   }
 }
 

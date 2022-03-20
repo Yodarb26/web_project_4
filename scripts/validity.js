@@ -69,12 +69,12 @@ function resetForm(formEl, settings) {
   formEl.reset();
 }
 
-enableValidation({
-  formSelector: ".form-name",
-  inputSelector: ".form-name__input",
-  submitButtonSelector: ".form-name__save-button",
-  inactiveButtonClass: "form-name__save-button_disabled",
-  inputErrorClass: "form-name__modal-type_error",
-  errorClass: "modal__popup__error_visible",
-});
+// enableValidation({
+//   formSelector: ".form-name",
+//   inputSelector: ".form-name__input",
+//   submitButtonSelector: ".form-name__save-button",
+//   inactiveButtonClass: "form-name__save-button_disabled",
+//   inputErrorClass: "form-name__modal-type_error",
+//   errorClass: "modal__popup__error_visible",
+// });
 
