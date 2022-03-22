@@ -1,5 +1,5 @@
 //FORMVALIDATOR
-import FormValidator from "./FormValidator.js"
+// import FormValidator from "./FormValidator.js"
 
 // function showError(errorEl, inputEl, settings) {
 //   errorEl.classList.add(settings.errorClass);
@@ -62,12 +62,12 @@ import FormValidator from "./FormValidator.js"
 //   });
 // }
 
-function resetForm(formEl, settings) {
-  const buttonEl = formEl.querySelector(settings.submitButtonSelector);
-  buttonEl.disabled = true;
-  buttonEl.classList.add(settings.inactiveButtonClass);
-  formEl.reset();
-}
+// function resetForm(formEl, settings) {
+//   const buttonEl = formEl.querySelector(settings.submitButtonSelector);
+//   buttonEl.disabled = true;
+//   buttonEl.classList.add(settings.inactiveButtonClass);
+//   formEl.reset();
+// }
 
 // enableValidation({
 //   formSelector: ".form-name",

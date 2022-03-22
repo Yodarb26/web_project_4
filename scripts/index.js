@@ -2,7 +2,7 @@
 
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
-// console.log(FormValidator);
+import {openPopup, closePopup, openProfilePopup, editProfileRefreshForm, clickOutsideOverlay, pressEscKey} from './util.js';
 
 const editFormBtn = document.querySelector(".profile__edit-button");
 const closeProfileButton = document.querySelector("#close-profile-popup");
@@ -11,8 +11,8 @@ const closeImagePreviewButton = document.querySelector("#close-image-popup");
 const addCardBtn = document.querySelector(".profile__plus-button");
 const cardCreateBtn = document.querySelector("#create-card-button");
 
-const listTitle = document.querySelector(".profile__title");
-const listSubtitle = document.querySelector(".profile__subtitle");
+// const listTitle = document.querySelector(".profile__title");
+// const listSubtitle = document.querySelector(".profile__subtitle");
 
 const profilePopup= document.querySelector("#edit-profile-popup");//.popup__form
 const addCardPopup = document.querySelector("#add-card-popup");
@@ -24,9 +24,8 @@ const cardLikeButtons = document.querySelector("#active-like-button");
 
 const formProfile = document.querySelector("#edit-profile-popup");
 const formCard = document.querySelector("#add-card-popup");
-
-const titleInput = document.querySelector("#list-title");
-const subtitleInput = document.querySelector("#list-subtitle");
+// const titleInput = document.querySelector("#list-title");
+// const subtitleInput = document.querySelector("#list-subtitle");
 
 const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
@@ -34,42 +33,42 @@ const cardUrlInput = document.querySelector("#card-url");
 const modalImageElement = imagePopup.querySelector(".modal__popup-image");
 const modalCaption = imagePopup.querySelector(".modal__popup-caption");
 
-function openPopup(popup) {
-  popup.classList.add("modal_opened");
-  popup.addEventListener('click', clickOutsideOverlay);
-  document.addEventListener("keydown",pressEscKey);
-}
+// function openPopup(popup) {
+//   popup.classList.add("modal_opened");
+//   popup.addEventListener('click', clickOutsideOverlay);
+//   document.addEventListener("keydown",pressEscKey);
+// }
 
-function closePopup(popup) {
-  popup.classList.remove("modal_opened");
-  popup.removeEventListener("click", clickOutsideOverlay);
-  document.removeEventListener("keydown",pressEscKey);
-}
+// function closePopup(popup) {
+//   popup.classList.remove("modal_opened");
+//   popup.removeEventListener("click", clickOutsideOverlay);
+//   document.removeEventListener("keydown",pressEscKey);
+// }
 
-function openProfilePopup(popup) {
-  titleInput.value = listTitle.textContent;
-  subtitleInput.value = listSubtitle.textContent;
-  openPopup(popup);
-}
+// function openProfilePopup(popup) {
+//   titleInput.value = listTitle.textContent;
+//   subtitleInput.value = listSubtitle.textContent;
+//   openPopup(popup);
+// }
 
-function clickOutsideOverlay(e){
-    if(e.target.classList.contains("modal")){
-      closePopup(e.target);
-    }
-}
+// function clickOutsideOverlay(e){
+//     if(e.target.classList.contains("modal")){
+//       closePopup(e.target);
+//     }
+// }
 
-function pressEscKey(e){
-  if(e.key === "Escape"){
-    closePopup(document.querySelector(".modal_opened"));
-  }
-}
+// function pressEscKey(e){
+//   if(e.key === "Escape"){
+//     closePopup(document.querySelector(".modal_opened"));
+//   }
+// }
 
-function editProfileRefreshForm(event) {
-  event.preventDefault();
-  listTitle.textContent = titleInput.value;
-  listSubtitle.textContent = subtitleInput.value;
-  closePopup(profilePopup);
-}
+// function editProfileRefreshForm(event) {
+//   event.preventDefault();
+//   listTitle.textContent = titleInput.value;
+//   listSubtitle.textContent = subtitleInput.value;
+//   closePopup(profilePopup);
+// }
 
 function editCardRefreshForm(evt) {
   evt.preventDefault();
