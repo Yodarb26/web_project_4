@@ -4,14 +4,16 @@
   border-radius: 2px;
   color: #000000;
   cursor: not-allowed;
-}
-
-.form-name__save-button_disabled:disabled{
-  color: #000000;
   opacity: 0.2;
 }
 
+/* .form-name__save-button_disabled:disabled{
+  color: #000000;
+  opacity: 0.2;
+} */
+
 .form-name__save-button_disabled:hover{
   color:#FFFFFF;
-  background:rgba(0, 0, 0, 0.8);
+  /* background:rgba(0, 0, 0, 0.8); */
+  opacity: 0.2;
 }

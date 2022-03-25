@@ -1,7 +1,11 @@
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
-import {titleInput, subtitleInput,listTitle,listSubtitle, editProfileRefreshForm, openPopup, closePopup, openProfilePopup, clickOutsideOverlay, pressEscKey} from './util.js';
+import {openPopup, closePopup, clickOutsideOverlay, pressEscKey} from './util.js';
 
+const titleInput = document.querySelector("#list-title");
+const subtitleInput = document.querySelector("#list-subtitle");
+const listTitle = document.querySelector(".profile__title");
+const listSubtitle = document.querySelector(".profile__subtitle");
 const editFormBtn = document.querySelector(".profile__edit-button");
 const closeProfileButton = document.querySelector("#close-profile-popup");
 const closeCardButton = document.querySelector("#close-card-popup");
@@ -22,6 +26,20 @@ const formCard = document.querySelector("#add-card-popup");
 const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
 
+function openProfilePopup(popup) {
+  titleInput.value = listTitle.textContent;
+  subtitleInput.value = listSubtitle.textContent;
+  openPopup(popup);
+}
+
+function editProfileRefreshForm(event) {
+  const profilePopup= document.querySelector("#edit-profile-popup");
+  event.preventDefault();
+  listTitle.textContent = titleInput.value;
+  listSubtitle.textContent = subtitleInput.value;
+  closePopup(profilePopup);
+}
+
 function editCardRefreshForm(evt) {
   evt.preventDefault();
   const data = {
@@ -30,7 +48,8 @@ function editCardRefreshForm(evt) {
   };
 
   renderCard(data);
-  evt.target.reset(data);
+  // evt.target.reset(data);
+  addFormValidator.resetForm()
   closePopup(addCardPopup);
 };
 

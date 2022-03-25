@@ -1,4 +1,4 @@
-import {titleInput, subtitleInput,listTitle,listSubtitle, editProfileRefreshForm, openPopup, closePopup, openProfilePopup, clickOutsideOverlay, pressEscKey} from './util.js';
+import {openPopup, closePopup, clickOutsideOverlay, pressEscKey} from './util.js';
 
 const imagePopup = document.querySelector("#image-popup");
 const modalImageElement = imagePopup.querySelector(".modal__popup-image");
