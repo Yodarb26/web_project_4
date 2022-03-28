@@ -26,6 +26,10 @@ const formCard = document.querySelector("#add-card-popup");
 const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
 
+// const imagePopup = document.querySelector("#image-popup");
+// const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+// const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+
 function openProfilePopup(popup) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
@@ -49,7 +53,7 @@ function editCardRefreshForm(evt) {
 
   renderCard(data);
   // evt.target.reset(data);
-  addFormValidator.resetForm()
+  addFormValidator.resetForm();
   closePopup(addCardPopup);
 };
 

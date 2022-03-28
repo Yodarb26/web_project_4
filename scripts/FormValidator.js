@@ -48,28 +48,31 @@ class FormValidator{
   }
 
   _setEventListeners(){
-    const inputList = Array.from(this._formEl.querySelectorAll(this._inputSelector)
+    // const inputList = Array.from(this._formEl.querySelectorAll(this._inputSelector)
+    // );
+    // const buttonEl =  this._formEl.querySelector(this._submitButtonSelector);
+    this._inputList = Array.from(this._formEl.querySelectorAll(this._inputSelector)
     );
-    const buttonEl =  this._formEl.querySelector(this._submitButtonSelector);
+    this._buttonEl =  this._formEl.querySelector(this._submitButtonSelector);
 
-      inputList.forEach((inputEl) => {
+    this._inputList.forEach((inputEl) => {
         inputEl.addEventListener('input', () => {
           this._checkInputValidity(inputEl);
           // this._toggleButton(this._inputList, this._buttonEl);
-          this._toggleButton(inputList, buttonEl);
+          this._toggleButton();
       });
     });
   };
 
   resetForm() {
-    const buttonEl = this._element.querySelector(settings.submitButtonSelector);
+    // const buttonEl = this._element.querySelector(settings.submitButtonSelector);
     buttonEl.disabled = true;
     buttonEl.classList.add(settings.inactiveButtonClass);
     this._element.reset();
-    // this._toggleButton();
+    this._toggleButton();
   }
 
-  enableValidation(){s
+  enableValidation(){
     this._formEl.addEventListener('submit', (e) => {
       e.preventDefault();
     });
