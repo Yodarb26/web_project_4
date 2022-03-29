@@ -1,6 +1,6 @@
-import Card from './Card.js';
-import FormValidator from './FormValidator.js';
-import {openPopup, closePopup, clickOutsideOverlay, pressEscKey} from './util.js';
+import Card from "./Card.js";
+import FormValidator from "./FormValidator.js";
+import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
 
 const titleInput = document.querySelector("#list-title");
 const subtitleInput = document.querySelector("#list-subtitle");
@@ -13,7 +13,7 @@ const closeImagePreviewButton = document.querySelector("#close-image-popup");
 const addCardBtn = document.querySelector(".profile__plus-button");
 const cardCreateBtn = document.querySelector("#create-card-button");
 
-const profilePopup= document.querySelector("#edit-profile-popup");//.popup__form
+const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
 const addCardPopup = document.querySelector("#add-card-popup");
 
 const cardTemplate = document.querySelector("#card-template");
@@ -26,9 +26,9 @@ const formCard = document.querySelector("#add-card-popup");
 const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
 
-// const imagePopup = document.querySelector("#image-popup");
-// const modalImageElement = imagePopup.querySelector(".modal__popup-image");
-// const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+export const imagePopup = document.querySelector("#image-popup");
+export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
 
 function openProfilePopup(popup) {
   titleInput.value = listTitle.textContent;
@@ -37,7 +37,7 @@ function openProfilePopup(popup) {
 }
 
 function editProfileRefreshForm(event) {
-  const profilePopup= document.querySelector("#edit-profile-popup");
+  const profilePopup = document.querySelector("#edit-profile-popup");
   event.preventDefault();
   listTitle.textContent = titleInput.value;
   listSubtitle.textContent = subtitleInput.value;
@@ -52,10 +52,9 @@ function editCardRefreshForm(evt) {
   };
 
   renderCard(data);
-  // evt.target.reset(data);
   addFormValidator.resetForm();
   closePopup(addCardPopup);
-};
+}
 
 formProfile.addEventListener("submit", editProfileRefreshForm);
 editFormBtn.addEventListener("click", () => {
@@ -67,9 +66,9 @@ addCardBtn.addEventListener("click", () => {
   openPopup(addCardPopup);
 });
 
-closeProfileButton.addEventListener("click", () =>  closePopup(profilePopup));
-closeCardButton.addEventListener("click", () =>  closePopup(addCardPopup));
-closeImagePreviewButton.addEventListener("click", () =>  closePopup(imagePopup));
+closeProfileButton.addEventListener("click", () => closePopup(profilePopup));
+closeCardButton.addEventListener("click", () => closePopup(addCardPopup));
+closeImagePreviewButton.addEventListener("click", () => closePopup(imagePopup));
 
 function addCardToPage(card) {
   cardList.prepend(card);
@@ -113,15 +112,16 @@ const addFormEl = formCard.querySelector(".form-name");
 const editFormEl = formProfile.querySelector(".form-name");
 
 const formValidatorConfig = {
-    inputSelector: ".form-name__input",
-    submitButtonSelector: ".form-name__save-button",
-    inactiveButtonClass: "form-name__save-button_disabled",
-    inputErrorClass: "form-name__modal-type_error",
-    errorClass: "modal__popup__error_visible",
-  }
+  inputSelector: ".form-name__input",
+  submitButtonSelector: ".form-name__save-button",
+  inactiveButtonClass: "form-name__save-button_disabled",
+  inputErrorClass: "form-name__modal-type_error",
+  errorClass: "modal__popup__error_visible",
+};
 
-  const addFormValidator =  new FormValidator(formValidatorConfig, addFormEl);
-  addFormValidator.enableValidation();
+const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
+addFormValidator.enableValidation();
 
-  const editFormValidator =  new FormValidator(formValidatorConfig, editFormEl);
-  editFormValidator.enableValidation();
+const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
+editFormValidator.enableValidation();
+
