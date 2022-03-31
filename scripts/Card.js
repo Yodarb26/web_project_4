@@ -10,6 +10,10 @@ class Card {
     this._element = null;
   }
 
+  _getElement = () => {
+    this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
+  }
+
   _handleCardPreview = () => {
     modalImageElement.src = this._url;
     modalCaption.textContent = this._title;
@@ -40,10 +44,12 @@ class Card {
   };
 
   render = () => {
-    this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
-    this._element.querySelector(".elements-grid__image").src = this._url;
-    this._element.querySelector(".elements-grid__image").alt = this._url;
-    this._element.querySelector(".elements-grid__text").textContent = this._title;
+    this._getElement();
+    const imageElement = this._element.querySelector('.elements-grid__image');
+    const titleElement = this._element.querySelector(".elements-grid__text");
+    imageElement.src = this._url;
+    imageElement.alt = this._url;
+    titleElement.textContent = this._title;
 
     this._imageElement = this._element.querySelector(".elements-grid__image");
     this._titleElement = this._element.querySelector(".elements-grid__text");

@@ -76,7 +76,7 @@ function addCardToPage(card) {
 
 function renderCard(data) {
   const card = new Card(cardTemplate, data);
-  addCardToPage(card.render());
+  addCardToPage(card.render(data));
 }
 
 const initialCards = [

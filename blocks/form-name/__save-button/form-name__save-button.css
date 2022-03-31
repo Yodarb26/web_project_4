@@ -12,16 +12,17 @@
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
   }
 
-  .form-name__save-button:disabled{
+  /* .form-name__save-button:disabled{
     opacity: .2;
     background:white;
-  }
+  } */
 
   .form-name__save-button:hover {
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+    /* transition: opacity 0.3s ease; */
   }
 
   @media only screen and (max-width: 325px) {
