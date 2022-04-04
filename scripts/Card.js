@@ -55,7 +55,7 @@ class Card {
     this._titleElement = this._element.querySelector(".elements-grid__text");
     this._deleteCard = this._element.querySelector(".elements-grid__delete-button");
     this._cardLikeButton = this._element.querySelector(".elements-grid__icon");
-    this._setEventListeners(this._element);
+    this._setEventListeners();
     return this._element;
   };
 }

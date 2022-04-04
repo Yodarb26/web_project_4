@@ -53,6 +53,7 @@ function editCardRefreshForm(evt) {
 
   renderCard(data);
   addFormValidator.resetForm();
+  editFormValidator.resetForm();
   closePopup(addCardPopup);
 }
 
@@ -106,8 +107,13 @@ const initialCards = [
   },
 ];
 
+//Cards rendering
+// initialCards.forEach((data) => {
+//   renderCard(data, formCard);
+// });
 initialCards.forEach(renderCard);
 
+// Validators
 const addFormEl = formCard.querySelector(".form-name");
 const editFormEl = formProfile.querySelector(".form-name");
 
