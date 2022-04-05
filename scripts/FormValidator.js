@@ -25,7 +25,7 @@ class FormValidator {
       `#${inputEl.id}-error`);
     errorEl.classList.remove(this._errorClass);
     inputEl.classList.remove(this._inputErrorClass);
-    errorEl.textContent = ' ';
+    errorEl.textContent = '';
   }
 
   _toggleButton() {
