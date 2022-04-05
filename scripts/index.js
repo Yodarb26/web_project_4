@@ -23,6 +23,7 @@ const cardLikeButtons = document.querySelector("#active-like-button");
 // const formProfile = document.querySelector("#edit-profile-popup");
 // const formCard = document.querySelector("#add-card-popup"); .form-name
 
+//adding class .form-name as a second argument of validator ?
 const formProfile = document.querySelector("#edit-profile-popup .form-name");
 const formCard = document.querySelector("#add-card-popup .form-name");
 
@@ -129,8 +130,8 @@ const formValidatorConfig = {
 };
 
 const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
-addFormValidator.enableValidation();
+addFormValidator.enableValidation(".form-name");
 
 const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
-editFormValidator.enableValidation();
+editFormValidator.enableValidation(".form-name");
 
