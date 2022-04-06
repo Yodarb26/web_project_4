@@ -13,19 +13,17 @@ class FormValidator {
   }
 
   _showError(inputEl) {
-    const errorEl = this._formEl.querySelector(
-      `#${inputEl.id}-error`);
+    const errorEl = this._formEl.querySelector(`#${inputEl.id}`);
     errorEl.classList.add(this._errorClass);
-    inputEl.classList.add(this._inputErrorClass);
     errorEl.textContent = inputEl.validationMessage;
+    inputEl.classList.add(this._inputErrorClass);
   }
 
   _hideError(inputEl) {
-    const errorEl = this._formEl.querySelector(
-      `#${inputEl.id}-error`);
+    const errorEl = this._formEl.querySelector(`#${inputEl.id}`);
     errorEl.classList.remove(this._errorClass);
+    errorEl.textContent = ' ';
     inputEl.classList.remove(this._inputErrorClass);
-    errorEl.textContent = '';
   }
 
   _toggleButton() {
@@ -63,7 +61,7 @@ class FormValidator {
   }
 
   resetForm() {
-    this._element.reset();
+    this._formEl.reset();
     this._toggleButton();
   }
 

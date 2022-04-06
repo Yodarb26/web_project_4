@@ -2,15 +2,10 @@
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 2px;
-  /* color: #000000; */
-  color: #FFFFFF;
+  color: #000000;
   cursor: not-allowed;
-  background:rgba(0, 0, 0, 0.8);
-  opacity: 0.2;
 }
 
 .form-name__save-button_disabled:hover{
-  /* color: #FFFFFF;
-  background:rgba(0, 0, 0, 0.8); */
   opacity: 0.2;
 }

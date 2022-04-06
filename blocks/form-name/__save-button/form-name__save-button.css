@@ -1,29 +1,22 @@
 .form-name__save-button {
-    display: flex;
-    justify-content: center;
-    padding: 18px 0 13px 0;
-    width: 100%;
-    margin: 48px auto 0 auto;
-    border-radius: 2px;
-    border: none;
-    color: #fff;
-    height: 50px;
-    /* background: #000000; */
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 18px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    /* background:white; */
-  }
-
-  /* .form-name__save-button:disabled{
-    opacity: .2;
-    background:white;
-  } */
+  display: flex;
+  justify-content: center;
+  padding: 18px 0 13px 0;
+  width: 100%;
+  margin: 48px auto 0 auto;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  height: 50px;
+  background: #000000;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
 
   .form-name__save-button:hover {
     opacity: 0.8;
-    /* transition: opacity 0.3s ease; */
   }
 
   @media only screen and (max-width: 325px) {

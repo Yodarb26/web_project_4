@@ -45,14 +45,17 @@ class Card {
 
   render = () => {
     this._getElement();
-    const imageElement = this._element.querySelector('.elements-grid__image');
-    const titleElement = this._element.querySelector(".elements-grid__text");
-    imageElement.src = this._url;
-    imageElement.alt = this._url;
-    titleElement.textContent = this._title;
-
     this._imageElement = this._element.querySelector(".elements-grid__image");
     this._titleElement = this._element.querySelector(".elements-grid__text");
+    // const titleElement = this._element.querySelector(".elements-grid__text");
+    // imageElement.src = this._url;
+    this._imageElement.src = this._url;
+    this._imageElement.alt = this._url;
+    // imageElement.alt = this._url;
+    // titleElement.textContent = this._title;
+    this._titleElement.textContent = this._title;
+    // this._imageElement = this._element.querySelector(".elements-grid__image");
+    // this._titleElement = this._element.querySelector(".elements-grid__text");
     this._deleteCard = this._element.querySelector(".elements-grid__delete-button");
     this._cardLikeButton = this._element.querySelector(".elements-grid__icon");
     this._setEventListeners();

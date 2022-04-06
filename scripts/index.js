@@ -20,12 +20,12 @@ const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".elements-grid__cards");
 const cardLikeButtons = document.querySelector("#active-like-button");
 
-// const formProfile = document.querySelector("#edit-profile-popup");
-// const formCard = document.querySelector("#add-card-popup"); .form-name
+const formProfile = document.querySelector("#edit-profile-popup");
+const formCard = document.querySelector("#add-card-popup");
 
 //adding class .form-name as a second argument of validator ?
-const formProfile = document.querySelector("#edit-profile-popup .form-name");
-const formCard = document.querySelector("#add-card-popup .form-name");
+// const formProfile = document.querySelector("#edit-profile-popup .form-name");
+// const formCard = document.querySelector("#add-card-popup .form-name");
 
 const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
