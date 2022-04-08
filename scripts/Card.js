@@ -11,7 +11,9 @@ class Card {
   }
 
   _getElement = () => {
-    this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
+    // this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
+    return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
+
   }
 
   _handleCardPreview = () => {
@@ -44,7 +46,7 @@ class Card {
   };
 
   render = () => {
-    this._getElement();
+    this._element = this._getElement();
     this._imageElement = this._element.querySelector(".elements-grid__image");
     this._titleElement = this._element.querySelector(".elements-grid__text");
     // const titleElement = this._element.querySelector(".elements-grid__text");

@@ -7,6 +7,5 @@
 }
 
 .form-name__save-button_disabled:hover{
-  color: #FFFFFF;
-  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.2;
 }
