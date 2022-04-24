@@ -1,0 +1,25 @@
+{
+  "name": "sprint-8",
+  "version": "0.0.1",
+  "description": "yandex practicum sprint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yodarb26/web_project_4.git"
+  },
+  "keywords": [
+    "practicum",
+    "sprint",
+    "8",
+    "webpack"
+  ],
+  "author": "samir samir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yodarb26/web_project_4/issues"
+  },
+  "homepage": "https://github.com/Yodarb26/web_project_4#readme"
+}
