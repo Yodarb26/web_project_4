@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href=".src/pages/index.css" /> -->
-    <link rel="stylesheet" href="./pages/index.css" />
+    <!-- <link rel="stylesheet" href="./pages/index.css" /> -->
     <title>Around the U.S</title>
   </head>
 
@@ -53,7 +53,10 @@
     <div class="page__wrapper">
       <header class="header container">
         <!-- <img class="logo" src="./images/logo/Vector.svg" alt="logo" /> -->
-        <img class="logo" src="../src/images/logo/Vector.svg" alt="logo" />
+        <!-- <img class="logo" src="../src/images/logo/Vector.svg" alt="logo" /> -->
+        <img class="logo" src="<%=require('../src/images/logo/Vector.svg')%>" alt="logo" />
+
+
       </header>
 
       <main>
@@ -61,7 +64,7 @@
           <div class="profile__container-body">
             <div class="profile__body">
               <!-- <img class="profile__photo" src="images/jcousteau.jpg" alt="Avatar" /> -->
-              <img class="profile__photo" src="images/jcousteau.jpg" alt="Avatar" />
+              <img class="profile__photo" src="<%=require('../src/images/jcousteau.jpg')%>" alt="Avatar" />
 
               <div class="profile__edit-container">
                 <div class="profile__button-text">
@@ -97,6 +100,6 @@
     </template>
 
     <!-- <script type="module" src="./scripts/index.js"></script> -->
-    <script type="module" src="./index.js"></script>
+    <!-- <script type="module" src="./index.js"></script> -->
   </body>
 </html>
