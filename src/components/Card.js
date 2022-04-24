@@ -1,7 +1,7 @@
 // import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
 // import { imagePopup, modalImageElement, modalCaption } from "./index.js";
 
-import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "../scripts/util.js";
+import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "../components/util.js";
 import { imagePopup, modalImageElement, modalCaption } from "../pages/index.js";
 
 class Card {
