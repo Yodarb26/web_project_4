@@ -1,5 +1,8 @@
-import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
-import { imagePopup, modalImageElement, modalCaption } from "./index.js";
+// import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
+// import { imagePopup, modalImageElement, modalCaption } from "./index.js";
+
+import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "../scripts/util.js";
+import { imagePopup, modalImageElement, modalCaption } from "../pages/index.js";
 
 class Card {
   constructor(template, data) {
@@ -13,7 +16,6 @@ class Card {
   _getElement = () => {
     // this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
     return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
-
   }
 
   _handleCardPreview = () => {

@@ -1,6 +1,10 @@
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
-import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
+// import Card from "./Card.js";
+// import FormValidator from "./FormValidator.js";
+// import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
+
+import Card from "../scripts/Card.js";
+import FormValidator from "../scripts/FormValidator.js";
+import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "../scripts/util.js";
 
 const titleInput = document.querySelector("#list-title");
 const subtitleInput = document.querySelector("#list-subtitle");
