@@ -1,6 +1,3 @@
-// import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
-// import { imagePopup, modalImageElement, modalCaption } from "./index.js";
-
 import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
 import { imagePopup, modalImageElement, modalCaption } from "../pages/index.js";
 
@@ -51,15 +48,9 @@ class Card {
     this._element = this._getElement();
     this._imageElement = this._element.querySelector(".elements-grid__image");
     this._titleElement = this._element.querySelector(".elements-grid__text");
-    // const titleElement = this._element.querySelector(".elements-grid__text");
-    // imageElement.src = this._url;
     this._imageElement.src = this._url;
     this._imageElement.alt = this._url;
-    // imageElement.alt = this._url;
-    // titleElement.textContent = this._title;
     this._titleElement.textContent = this._title;
-    // this._imageElement = this._element.querySelector(".elements-grid__image");
-    // this._titleElement = this._element.querySelector(".elements-grid__text");
     this._deleteCard = this._element.querySelector(".elements-grid__delete-button");
     this._cardLikeButton = this._element.querySelector(".elements-grid__icon");
     this._setEventListeners();

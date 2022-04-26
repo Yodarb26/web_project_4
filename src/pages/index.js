@@ -1,6 +1,3 @@
-// import Card from "./Card.js";
-// import FormValidator from "./FormValidator.js";
-// import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
 import './index.css';
 
 import Card from "../components/Card.js";
