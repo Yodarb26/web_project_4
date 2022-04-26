@@ -10,8 +10,17 @@ module.exports = {
         clean:true,
     },
     mode: 'development',
+    devtool: "inline-source-map",
+    devServer: {
+        static: "./dist",
+        port: 5500,
+    },
     module: {
         rules: [
+            {
+                test: /\.js/i,
+                loader: "babel-loader",
+            },
             {
                 test: /\.css$/i,
                 use: [
