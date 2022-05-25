@@ -13,13 +13,14 @@ module.exports = {
     devtool: "inline-source-map",
     devServer: {
         static: "./dist",
-        port: 5500,
+        port: 5501,
     },
     module: {
         rules: [
             {
                 test: /\.js/i,
-                loader: "babel-loader",
+                use:"babel-loader",
+                // loader: "babel-loader",
             },
             {
                 test: /\.css$/i,

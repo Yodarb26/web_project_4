@@ -1,7 +1,9 @@
+import Popup from "./Popup";
+
 import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
 import { imagePopup, modalImageElement, modalCaption } from "../pages/index.js";
 
-class Card {
+export default class Card extends Popup {
   constructor(template, data) {
     this._template = template;
     this._data = data;
@@ -18,7 +20,8 @@ class Card {
   _handleCardPreview = () => {
     modalImageElement.src = this._url;
     modalCaption.textContent = this._title;
-    modalImageElement.alt = this._data.alt;
+    modalImageElement.alt =`image of${url}`;
+
     openPopup(imagePopup);
   };
 
@@ -28,8 +31,8 @@ class Card {
   };
 
   _handleDeleteCard = () => {
-    this._element
-    .remove();
+    this._element.remove();
+    this.element = null;
   };
 
   _setEventListeners = () => {
@@ -58,4 +61,4 @@ class Card {
   };
 }
 
-export default Card;
+// export default Card;
