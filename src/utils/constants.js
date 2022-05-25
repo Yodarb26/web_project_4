@@ -1,9 +1,9 @@
 
-export function pressEscKey(e) {
-  if (e.key === "Escape") {
-    closePopup(document.querySelector(".modal_opened"));
-  }
-}
+// export function pressEscKey(e) {
+//   if (e.key === "Escape") {
+//     closePopup(document.querySelector(".modal_opened"));
+//   }
+// }
 
 
 export const initialCards = [
@@ -44,8 +44,8 @@ export const formValidatorConfig = {
 
 
 export const selectors = {
-  cardSection: "elements-grid__card",
-  cardTemplate: "#card-template",
+  cardSection: 'elements-grid__card',//card list
+  cardTemplate: "#card-template",//card template
   // previewPopup: "popup_type_image",
 }
 

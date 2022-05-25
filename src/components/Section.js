@@ -1,22 +1,26 @@
 export default class Section {
   //const addCardPopup = document.querySelector("#add-card-popup");
-  constructor({items, renderer}, addCardPopup){
-      this._items = items;
+  constructor({renderer, selector}, addCardPopup){
+      // this._items = items;
       this._renderer = renderer;
       // this._addCardPopup = document.querySelector(`.${addCardPopup}`);
-      this._addCardPopup = document.querySelector(items);
+      // this._addCardPopup = document.querySelector(items);
+      this._element = document.querySelector(selector);
   }
 
-  renderer(data) {
-    items.forEach((data) => {
-        this._renderer(data);
-    });
+  renderItems(data) {
+    this._renderer = this._element(data);
+    }
+
+  // renderer(data) {
+  //   items.forEach((data) => {
+  //       this._renderer(data);
+  //   });
 
   // renderer(items) {
   //   items.forEach((card) => {
   //       this._renderer(items);
   //   });
-}
 
 // //Cards rendering
 // // initialCards.forEach((data) => {
@@ -38,11 +42,11 @@ export default class Section {
 //   this._addCardPopup.append(card);
 // }
 
-addItem(items) {
+addItem(items){
   // this.cardContainer.prepend(card); is card ==> element ?
-    this._addCardPopup.append(items);
+    // this._addCardPopup.append(items)
+    this._element(items);
   }
-
 }
 // export default Section;
 

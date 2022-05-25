@@ -1,27 +1,43 @@
 import './index.css';
 
-
 //import all classes
-import Card from "../components/Card";
+import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
-import Section from '../components/Section';
-import PopupWithImages from '../components/PopupWithImages';
-import { initialCards,formValidatorConfig, selectors } from "../utils/constants";
+import Section from '../components/Section.js';
+import PopupWithImages from '../components/PopupWithImages.js';
+import { initialCards,formValidatorConfig, selectors } from "../utils/constants.js";
 
 
-const cardSection =  new Section({
-  renderer: (card) => {
+const CardSection =  new Section({
+  renderer: (item) => {
     // const cardEl = new Card(card).render();
-    const cardEl = new Card(card, selectors.cardTemplate);
-    cardSection.addItem(cardEl.render());
+    // const cardEl = new Card(item, selectors.cardTemplate);
+    // const cardEl = new Card(item, selectors.cardTemplate).render();
+    const cardEl = new Card(item, selectors.cardTemplate);
+    CardSection.addItem(cardEl.render());
+    // cardSection.addItem(cardEl.render());
   },
-},
+  selector:  selectors.cardSection,
+});
   //template == selector in Card.js
   // template: selectors.cardSection,
-  selectors.cardSection,
-);
+  // selectors.cardSection
 
-cardSection.renderCard(initialCards);
+
+// cardSection.initialCards;
+
+// const addFormEl = formCard.querySelector(".form-name");
+// const editFormEl = formProfile.querySelector(".form-name");
+
+// formProfile.addEventListener("submit", editProfileRefreshForm);
+// editFormBtn.addEventListener("click", () => {
+//   openProfilePopup(profilePopup);
+// });
+
+// formCard.addEventListener("submit", editCardRefreshForm);
+// addCardBtn.addEventListener("click", () => {
+//   openPopup(addCardPopup);
+// });
 
 // const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
 // const addCardPopup = document.querySelector("#add-card-popup");
@@ -32,6 +48,7 @@ cardSection.renderCard(initialCards);
 // const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
 // editFormValidator.enableValidation(".form-name");
 
-// initialCards.forEach(renderCard);
+
+    CardSection.renderItems(initialCards);
 
 

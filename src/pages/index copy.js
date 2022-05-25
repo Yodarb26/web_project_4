@@ -63,15 +63,15 @@ function editCardRefreshForm(evt) {
   closePopup(addCardPopup);
 }
 
-formProfile.addEventListener("submit", editProfileRefreshForm);
-editFormBtn.addEventListener("click", () => {
-  openProfilePopup(profilePopup);
-});
+// formProfile.addEventListener("submit", editProfileRefreshForm);
+// editFormBtn.addEventListener("click", () => {
+//   openProfilePopup(profilePopup);
+// });
 
-formCard.addEventListener("submit", editCardRefreshForm);
-addCardBtn.addEventListener("click", () => {
-  openPopup(addCardPopup);
-});
+// formCard.addEventListener("submit", editCardRefreshForm);
+// addCardBtn.addEventListener("click", () => {
+//   openPopup(addCardPopup);
+// });
 
 closeProfileButton.addEventListener("click", () => closePopup(profilePopup));
 closeCardButton.addEventListener("click", () => closePopup(addCardPopup));
@@ -120,16 +120,16 @@ function renderCard(data) {
 initialCards.forEach(renderCard);
 
 // Validators
-const addFormEl = formCard.querySelector(".form-name");
-const editFormEl = formProfile.querySelector(".form-name");
+// const addFormEl = formCard.querySelector(".form-name");
+// const editFormEl = formProfile.querySelector(".form-name");
 
-const formValidatorConfig = {
-  inputSelector: ".form-name__input",
-  submitButtonSelector: ".form-name__save-button",
-  inactiveButtonClass: "form-name__save-button_disabled",
-  inputErrorClass: "form-name__modal-type_error",
-  errorClass: "modal__popup__error_visible",
-};
+// const formValidatorConfig = {
+//   inputSelector: ".form-name__input",
+//   submitButtonSelector: ".form-name__save-button",
+//   inactiveButtonClass: "form-name__save-button_disabled",
+//   inputErrorClass: "form-name__modal-type_error",
+//   errorClass: "modal__popup__error_visible",
+// };
 
 // const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
 // addFormValidator.enableValidation(".form-name");
