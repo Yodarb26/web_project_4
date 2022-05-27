@@ -117,7 +117,7 @@ function renderCard(data) {
 // initialCards.forEach((data) => {
 //   renderCard(data, formCard);
 // });
-initialCards.forEach(renderCard);
+// initialCards.forEach(renderCard);
 
 // Validators
 // const addFormEl = formCard.querySelector(".form-name");

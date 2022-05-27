@@ -5,20 +5,22 @@ import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import Section from '../components/Section.js';
 import PopupWithImages from '../components/PopupWithImages.js';
-import { initialCards,formValidatorConfig, selectors } from "../utils/constants.js";
+// import { initialCards,formValidatorConfig, selectors } from "../utils/constants.js";
+import { initialCards, selectors } from "../utils/constants.js";
 
-
-const CardSection =  new Section({
-  renderer: (item) => {
-    // const cardEl = new Card(card).render();
+const CardSection =  new Section ({
+  renderer: (data) => {
+    // const cardEl = new Card(data).render();
     // const cardEl = new Card(item, selectors.cardTemplate);
-    // const cardEl = new Card(item, selectors.cardTemplate).render();
-    const cardEl = new Card(item, selectors.cardTemplate);
+    const cardEl = new Card(data, selectors.template);
+    // const cardEl = new Card(items, selectors.cardTemplate);
     CardSection.addItem(cardEl.render());
     // cardSection.addItem(cardEl.render());
-  },
-  selector:  selectors.cardSection,
-});
+  }
+  // selector:  selectors.cardSection,}
+}, selectors.cardSection,
+
+);
   //template == selector in Card.js
   // template: selectors.cardSection,
   // selectors.cardSection
@@ -50,5 +52,4 @@ const CardSection =  new Section({
 
 
     CardSection.renderItems(initialCards);
-
 

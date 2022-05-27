@@ -8,7 +8,9 @@
 
 export const initialCards = [
   {
+    //NAME
     title: "Lake & Mountain",
+    //LINK
     url: "https://images.unsplash.com/photo-1638802422633-694088680359?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
   },
   {
@@ -44,8 +46,8 @@ export const formValidatorConfig = {
 
 
 export const selectors = {
-  cardSection: 'elements-grid__card',//card list
-  cardTemplate: "#card-template",//card template
+  cardSection: '.elements-gris',//card list
+  template: ".elements-grid__card",//card template
   // previewPopup: "popup_type_image",
 }
 
