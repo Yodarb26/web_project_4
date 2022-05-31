@@ -1,16 +1,16 @@
 import Popup from "./Popup";
 
-class PopupWithForm extends Popup {
-  constructor(popupSelector, formSubmit){
+export class PopupWithForm extends Popup {
+  constructor({formSubmit},popupSelector){
     super(popupSelector);
     this._formSubmit = formSubmit;
     this._formEl = this._popupElement.querySelector("#edit-profile-popup"); //.popup__form
   }
 
-  //private method
-  _formSubmit(){
+  // //private method
+  // _formSubmit(){
 
-  }
+  // }
 
   //private method
   _getInputValues(){
@@ -21,7 +21,7 @@ class PopupWithForm extends Popup {
     });
   }
 
-  //pubic method
+  //public method
   setEventListeners() {
     super.setEventListeners();
   }
@@ -33,4 +33,3 @@ class PopupWithForm extends Popup {
   }
 }
 
-export default PopupWithForm;

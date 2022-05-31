@@ -1,22 +1,24 @@
 import Popup from "./Popup";
 
-import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
-import { imagePopup, modalImageElement, modalCaption } from "../pages/index.js";
-
 export default class Card extends Popup {
-  constructor(template, data) {
+  constructor({data, handleCardPreview}, template, popupSelector) {
+    super(popupSelector);
     this._template = template;
     this._data = data;
     this._title = data.title;
     this._url = data.url;
     this._element = null;
+    this._handleCardPreview = handleCardPreview;
+    // this._handleCardClick = handleCardClick;
   }
 
+  // Card template
   _getElement = () => {
     // this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
     return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
   }
 
+  //Card preview handler when clicked on
   _handleCardPreview = () => {
     modalImageElement.src = this._url;
     modalCaption.textContent = this._title;
@@ -25,28 +27,32 @@ export default class Card extends Popup {
     openPopup(imagePopup);
   };
 
+  //Card like handler/toggler
   _handleLikeIcon = () => {
     this._cardLikeButton.classList
     .toggle("elements-grid__icon-active");
   };
 
+  //Card removal handler
   _handleDeleteCard = () => {
     this._element.remove();
     this.element = null;
   };
 
+  //Event listeners
   _setEventListeners = () => {
-    this._cardLikeButton.addEventListener("click", (evt) => {
+    this._cardLikeButton.addEventListener("click", (evt) => { //card like event listener
       this._handleLikeIcon(evt);
     });
-    this._deleteCard.addEventListener("click", (evt) => {
+    this._deleteCard.addEventListener("click", (evt) => { //card delete event listener
       this._handleDeleteCard(evt);
     });
-    this._imageElement.addEventListener("click", (evt) => {
+    this._imageElement.addEventListener("click", (evt) => { //card preview event listener
       this._handleCardPreview(evt);
     });
   };
 
+  //Template displaying
   render = () => {
     this._element = this._getElement();
     this._imageElement = this._element.querySelector(".elements-grid__image");

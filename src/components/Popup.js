@@ -1,7 +1,4 @@
-import {pressEscKey} from "./util.js"
-
-
-class Popup {
+export default class Popup {
     constructor(popupSelector){
         this._popupElement = document.querySelector(`.${popupSelector}`);
         this._handleEscUp = this._handleEscUp.bind(this);
@@ -36,5 +33,3 @@ class Popup {
       document.removeEventListener("keydown", this._handleEscUp);
     }
 }
-
-export default Popup;

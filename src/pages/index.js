@@ -1,24 +1,41 @@
 import './index.css';
 
 //import all classes
-import Card from "../components/Card.js";
-import FormValidator from "../components/FormValidator.js";
-import Section from '../components/Section.js';
-import PopupWithImages from '../components/PopupWithImages.js';
-// import { initialCards,formValidatorConfig, selectors } from "../utils/constants.js";
-import { initialCards, selectors } from "../utils/constants.js";
+import Card from "../components/Card";
+import FormValidator from "../components/FormValidator";
+// import Popup from '../components/Popup';
+// import PopupWithImages from '../components/PopupWithImages';
+// import PopupWithForm from '../components/PopupWithForm';
+import Section from '../components/Section';
+// import UserInfo from '../components/UserInfo';
+import { initialCards,formValidatorConfig, selectors } from "../utils/constants.js";
+
+// function addCardToPage(card) {
+//   cardList.prepend(card);
+// }
+
+// function renderCard(data) {
+//   const card = new Card(cardTemplate, data);
+//   addCardToPage(card.render(data));
+// }
+
+//Cards rendering
+// initialCards.forEach((data) => {
+//   renderCard(data, formCard);
+// });
+// initialCards.forEach(renderCard);
 
 const CardSection =  new Section ({
   renderer: (data) => {
     // const cardEl = new Card(data).render();
     // const cardEl = new Card(item, selectors.cardTemplate);
-    const cardEl = new Card(data, selectors.template);
+    const cardEl = renderCard(data).render();
     // const cardEl = new Card(items, selectors.cardTemplate);
-    CardSection.addItem(cardEl.render());
+    CardSection.addItem(cardEl);
     // cardSection.addItem(cardEl.render());
   }
   // selector:  selectors.cardSection,}
-}, selectors.cardSection,
+},"elements-grid__cards",
 
 );
   //template == selector in Card.js
@@ -28,28 +45,6 @@ const CardSection =  new Section ({
 
 // cardSection.initialCards;
 
-// const addFormEl = formCard.querySelector(".form-name");
-// const editFormEl = formProfile.querySelector(".form-name");
-
-// formProfile.addEventListener("submit", editProfileRefreshForm);
-// editFormBtn.addEventListener("click", () => {
-//   openProfilePopup(profilePopup);
-// });
-
-// formCard.addEventListener("submit", editCardRefreshForm);
-// addCardBtn.addEventListener("click", () => {
-//   openPopup(addCardPopup);
-// });
-
-// const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
-// const addCardPopup = document.querySelector("#add-card-popup");
-
-// const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
-// addFormValidator.enableValidation(".form-name");
-
-// const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
-// editFormValidator.enableValidation(".form-name");
 
 
     CardSection.renderItems(initialCards);
-

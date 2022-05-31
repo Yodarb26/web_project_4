@@ -3,15 +3,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: './src/pages/index.js',
+    devtool: "inline-source-map",
+    entry: {
+       main: './src/pages/index.js',
+    },
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
         clean:true,
     },
     mode: 'development',
-    devtool: "inline-source-map",
     devServer: {
+        // contentBase: path.resolve(__dirname, "./dist"),
+        compress: true,
+        open: true,
         static: "./dist",
         port: 5501,
     },

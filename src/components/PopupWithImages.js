@@ -1,7 +1,6 @@
 import Popup from "./Popup";
 
 export default class PopupWithImages extends Popup {
-
   constructor(popupSelector) {
     super(popupSelector);
     this._modalImageElement = this._imagePopup.querySelector(".modal__popup-image");
@@ -9,8 +8,6 @@ export default class PopupWithImages extends Popup {
  }
 
  open({url, title}) {
-  // this._imagePopup.querySelector(".modal__popup-caption").textContent = title;
-    // this._popupElement.querySelector(".modal__popup-caption").textContent = title;
     const image = this._popupElement.querySelector(".modal__popup-image");
     this._modalImageElement.src = url;
     this._modalImageElement.alt =`image of${url}`;
@@ -18,5 +15,3 @@ export default class PopupWithImages extends Popup {
     super.open();
   }
 }
-
-///export default PopupWithImages;

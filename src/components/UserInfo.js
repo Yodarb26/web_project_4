@@ -1,4 +1,4 @@
-class UserInfo {
+export default class UserInfo {
   constructor(){
 
   }
@@ -8,6 +8,6 @@ class UserInfo {
   }
 
   setUserInfo(){
-    
+
   }
 }

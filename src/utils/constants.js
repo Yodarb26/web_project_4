@@ -1,11 +1,4 @@
 
-// export function pressEscKey(e) {
-//   if (e.key === "Escape") {
-//     closePopup(document.querySelector(".modal_opened"));
-//   }
-// }
-
-
 export const initialCards = [
   {
     //NAME
@@ -50,4 +43,33 @@ export const selectors = {
   template: ".elements-grid__card",//card template
   // previewPopup: "popup_type_image",
 }
+
+// export const titleInput = document.querySelector("#list-title");
+// export const subtitleInput = document.querySelector("#list-subtitle");
+// export const cardTitleInput = document.querySelector("#card-title");
+// export const cardUrlInput = document.querySelector("#card-url");
+
+// export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+// export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+// export const editFormBtn = document.querySelector(".profile__edit-button");
+// export const addCardBtn = document.querySelector(".profile__plus-button");
+
+// // const listTitle = document.querySelector(".profile__title");
+// // const listSubtitle = document.querySelector(".profile__subtitle");
+// // const closeProfileButton = document.querySelector("#close-profile-popup");
+// // const closeCardButton = document.querySelector("#close-card-popup");
+// // const closeImagePreviewButton = document.querySelector("#close-image-popup");
+
+// export const cardCreateBtn = document.querySelector("#create-card-button");
+
+// export const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
+// export const addCardPopup = document.querySelector("#add-card-popup");
+
+// export const formProfile = document.querySelector("#edit-profile-popup");
+// export const formCard = document.querySelector("#add-card-popup");
+
+// //adding class .form-name as a second argument of validator ?
+// export const formProfile = document.querySelector("#edit-profile-popup .form-name");
+// export const formCard = document.querySelector("#add-card-popup .form-name");
+// export const imagePopup = document.querySelector("#image-popup");
 

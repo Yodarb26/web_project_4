@@ -1,8 +1,6 @@
-import './index.css';
-
-import Card from "../components/Card.js";
-import FormValidator from "../components/FormValidator.js";
-import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "../components/util.js";
+import Card from "./Card.js";
+import FormValidator from "./FormValidator.js";
+import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
 
 const titleInput = document.querySelector("#list-title");
 const subtitleInput = document.querySelector("#list-subtitle");
@@ -15,8 +13,8 @@ const closeImagePreviewButton = document.querySelector("#close-image-popup");
 const addCardBtn = document.querySelector(".profile__plus-button");
 const cardCreateBtn = document.querySelector("#create-card-button");
 
-// const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
-// const addCardPopup = document.querySelector("#add-card-popup");
+const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
+const addCardPopup = document.querySelector("#add-card-popup");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".elements-grid__cards");
@@ -33,8 +31,8 @@ const cardTitleInput = document.querySelector("#card-title");
 const cardUrlInput = document.querySelector("#card-url");
 
 export const imagePopup = document.querySelector("#image-popup");
-// export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
-// export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
 
 function openProfilePopup(popup) {
   titleInput.value = listTitle.textContent;
@@ -63,15 +61,15 @@ function editCardRefreshForm(evt) {
   closePopup(addCardPopup);
 }
 
-// formProfile.addEventListener("submit", editProfileRefreshForm);
-// editFormBtn.addEventListener("click", () => {
-//   openProfilePopup(profilePopup);
-// });
+formProfile.addEventListener("submit", editProfileRefreshForm);
+editFormBtn.addEventListener("click", () => {
+  openProfilePopup(profilePopup);
+});
 
-// formCard.addEventListener("submit", editCardRefreshForm);
-// addCardBtn.addEventListener("click", () => {
-//   openPopup(addCardPopup);
-// });
+formCard.addEventListener("submit", editCardRefreshForm);
+addCardBtn.addEventListener("click", () => {
+  openPopup(addCardPopup);
+});
 
 closeProfileButton.addEventListener("click", () => closePopup(profilePopup));
 closeCardButton.addEventListener("click", () => closePopup(addCardPopup));
@@ -117,24 +115,22 @@ function renderCard(data) {
 // initialCards.forEach((data) => {
 //   renderCard(data, formCard);
 // });
-// initialCards.forEach(renderCard);
+initialCards.forEach(renderCard);
 
 // Validators
-// const addFormEl = formCard.querySelector(".form-name");
-// const editFormEl = formProfile.querySelector(".form-name");
+const addFormEl = formCard.querySelector(".form-name");
+const editFormEl = formProfile.querySelector(".form-name");
 
-// const formValidatorConfig = {
-//   inputSelector: ".form-name__input",
-//   submitButtonSelector: ".form-name__save-button",
-//   inactiveButtonClass: "form-name__save-button_disabled",
-//   inputErrorClass: "form-name__modal-type_error",
-//   errorClass: "modal__popup__error_visible",
-// };
+const formValidatorConfig = {
+  inputSelector: ".form-name__input",
+  submitButtonSelector: ".form-name__save-button",
+  inactiveButtonClass: "form-name__save-button_disabled",
+  inputErrorClass: "form-name__modal-type_error",
+  errorClass: "modal__popup__error_visible",
+};
 
-// const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
-// addFormValidator.enableValidation(".form-name");
+const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
+addFormValidator.enableValidation(".form-name");
 
-// const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
-// editFormValidator.enableValidation(".form-name");
-
-//export DOM const in constant.js to then import it again to index.js
+const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
+editFormValidator.enableValidation(".form-name");
