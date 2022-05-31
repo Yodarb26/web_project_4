@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------------------------------------------------------------*/
+                                                  /*IMPORTED MODULES*/
+/*------------------------------------------------------------------------------------------------------------------------*/
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
 import { openPopup, closePopup, clickOutsideOverlay, pressEscKey } from "./util.js";
@@ -15,11 +18,6 @@ const cardUrlInput = document.querySelector("#card-url");
 /*------------------------------------------------------------------------------------------------------------------------*/
                                                   /*CARDS BUTTONS*/
 /*------------------------------------------------------------------------------------------------------------------------*/
-const editFormBtn = document.querySelector(".profile__edit-button");
-const closeProfileButton = document.querySelector("#close-profile-popup");
-const closeCardButton = document.querySelector("#close-card-popup");
-const closeImagePreviewButton = document.querySelector("#close-image-popup");
-const addCardBtn = document.querySelector(".profile__plus-button");
 const cardCreateBtn = document.querySelector("#create-card-button");
 const cardLikeButtons = document.querySelector("#active-like-button");
 
@@ -28,14 +26,6 @@ const cardLikeButtons = document.querySelector("#active-like-button");
 /*------------------------------------------------------------------------------------------------------------------------*/
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".elements-grid__cards");
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-                                                  /*CARDS POPUP TEMPLATE*/
-/*------------------------------------------------------------------------------------------------------------------------*/
-const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
-const addCardPopup = document.querySelector("#add-card-popup");
-const formProfile = document.querySelector("#edit-profile-popup");
-const formCard = document.querySelector("#add-card-popup");
 
 //adding class .form-name as a second argument of validator ?
 // const formProfile = document.querySelector("#edit-profile-popup .form-name");
@@ -51,7 +41,6 @@ export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
 /*------------------------------------------------------------------------------------------------------------------------*/
                                                   /*CARDS OPENING FUNCTION*/
 /*------------------------------------------------------------------------------------------------------------------------*/
-
 function openProfilePopup(popup) {
   titleInput.value = listTitle.textContent;
   subtitleInput.value = listSubtitle.textContent;
@@ -61,7 +50,6 @@ function openProfilePopup(popup) {
 /*------------------------------------------------------------------------------------------------------------------------*/
                                                   /*CARDS EDITING FUNCTION*/
 /*------------------------------------------------------------------------------------------------------------------------*/
-
 function editProfileRefreshForm(event) {
   const profilePopup = document.querySelector("#edit-profile-popup");
   event.preventDefault();
@@ -70,10 +58,10 @@ function editProfileRefreshForm(event) {
   closePopup(profilePopup);
 }
 
+
 /*------------------------------------------------------------------------------------------------------------------------*/
                                                   /*CARDS RESET FUNCTION*/
 /*------------------------------------------------------------------------------------------------------------------------*/
-
 function editCardRefreshForm(evt) {
   evt.preventDefault();
   const data = {
@@ -88,8 +76,27 @@ function editCardRefreshForm(evt) {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
+                                                  /*CARDS ADDING FUNCTION*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+function addCardToPage(card) {
+  cardList.prepend(card);
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
                                                   /*EVENTS LISTENERS*/
 /*------------------------------------------------------------------------------------------------------------------------*/
+const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
+const addCardPopup = document.querySelector("#add-card-popup");
+const formProfile = document.querySelector("#edit-profile-popup");
+const formCard = document.querySelector("#add-card-popup");
+
+const addCardBtn = document.querySelector(".profile__plus-button");
+const editFormBtn = document.querySelector(".profile__edit-button");
+const closeCardButton = document.querySelector("#close-card-popup");
+const closeImagePreviewButton = document.querySelector("#close-image-popup");
+const closeProfileButton = document.querySelector("#close-profile-popup");
+
 formProfile.addEventListener("submit", editProfileRefreshForm);
 editFormBtn.addEventListener("click", () => {
   openProfilePopup(profilePopup);
@@ -104,14 +111,10 @@ closeProfileButton.addEventListener("click", () => closePopup(profilePopup));
 closeCardButton.addEventListener("click", () => closePopup(addCardPopup));
 closeImagePreviewButton.addEventListener("click", () => closePopup(imagePopup));
 
-function addCardToPage(card) {
-  cardList.prepend(card);
-}
 
 /*------------------------------------------------------------------------------------------------------------------------*/
                                                   /*CARDS RENDERING*/
 /*------------------------------------------------------------------------------------------------------------------------*/
-
 function renderCard(data) {
   const card = new Card(cardTemplate, data);
   addCardToPage(card.render(data));
@@ -151,9 +154,8 @@ initialCards.forEach(renderCard);
 
 
 /*------------------------------------------------------------------------------------------------------------------------*/
-                                                  /*VALIDATORS*/
+                                                  /*FORM VALIDATORS*/
 /*------------------------------------------------------------------------------------------------------------------------*/
-
 const addFormEl = formCard.querySelector(".form-name");
 const editFormEl = formProfile.querySelector(".form-name");
 
