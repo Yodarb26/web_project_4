@@ -5,8 +5,8 @@ export default class Card extends Popup {
     super(popupSelector);
     this._template = template;
     this._data = data;
-    this._title = data.title;
-    this._url = data.url;
+    // this._title = data.title;
+    // this._url = data.url;
     this._element = null;
     this._handleCardPreview = handleCardPreview;
     // this._handleCardClick = handleCardClick;

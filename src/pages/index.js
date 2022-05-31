@@ -8,7 +8,7 @@ import FormValidator from "../components/FormValidator";
 // import PopupWithForm from '../components/PopupWithForm';
 import Section from '../components/Section';
 // import UserInfo from '../components/UserInfo';
-import { initialCards,formValidatorConfig, selectors } from "../utils/constants.js";
+import { initialCards, selectors } from "../utils/constants.js";
 
 // function addCardToPage(card) {
 //   cardList.prepend(card);
@@ -27,17 +27,24 @@ import { initialCards,formValidatorConfig, selectors } from "../utils/constants.
 
 const CardSection =  new Section ({
   renderer: (data) => {
-    // const cardEl = new Card(data).render();
+    const cardEl = new Card(data, selectors.cardTemplate);
+    CardSection.addItem(cardEl.render());
     // const cardEl = new Card(item, selectors.cardTemplate);
-    const cardEl = renderCard(data).render();
+    // const cardEl = renderCard(data).render();
     // const cardEl = new Card(items, selectors.cardTemplate);
-    CardSection.addItem(cardEl);
     // cardSection.addItem(cardEl.render());
-  }
-  // selector:  selectors.cardSection,}
-},"elements-grid__cards",
-
+  },
+},
+  // selector: selectors.cardSection,
+  selectors.cardSection,
 );
+
+CardSection.renderItems(initialCards);
+
+  // selector:  selectors.cardSection,}
+// },"elements-grid__cards",
+  //},
+//);
   //template == selector in Card.js
   // template: selectors.cardSection,
   // selectors.cardSection
@@ -47,4 +54,4 @@ const CardSection =  new Section ({
 
 
 
-    CardSection.renderItems(initialCards);
+
