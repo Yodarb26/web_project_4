@@ -6,9 +6,9 @@ import FormValidator from "../components/FormValidator";
 // import Popup from '../components/Popup';
 // import PopupWithImages from '../components/PopupWithImages';
 // import PopupWithForm from '../components/PopupWithForm';
-import Section from '../components/Section';
+import Section from "../components/Section";
 // import UserInfo from '../components/UserInfo';
-import { initialCards, selectors } from "../utils/constants.js";
+import { initialCards, selectors } from "../utils/constants";
 
 // function addCardToPage(card) {
 //   cardList.prepend(card);
@@ -24,10 +24,11 @@ import { initialCards, selectors } from "../utils/constants.js";
 //   renderCard(data, formCard);
 // });
 // initialCards.forEach(renderCard);
+const cardDisplay = document.querySelector(selectors.cardTemplate);
 
 const CardSection =  new Section ({
-  renderer: (data) => {
-    const cardEl = new Card(data, selectors.cardTemplate);
+  renderer: (item) => {
+    const cardEl = new Card(item, cardDisplay);
     CardSection.addItem(cardEl.render());
     // const cardEl = new Card(item, selectors.cardTemplate);
     // const cardEl = renderCard(data).render();

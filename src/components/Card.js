@@ -14,8 +14,9 @@ export default class Card extends Popup {
 
   // Card template
   _getElement = () => {
+     return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
     // this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
-    return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
+        // return this._element;
   }
 
   //Card preview handler when clicked on
