@@ -28,7 +28,7 @@ const cardDisplay = document.querySelector(selectors.cardTemplate);
 
 const CardSection =  new Section ({
   renderer: (item) => {
-    const cardEl = new Card({data:item}, cardDisplay);
+    const cardEl = new Card({ data:item }, cardDisplay);
     CardSection.addItem(cardEl.render());
     // const cardEl = new Card(item, selectors.cardTemplate);
     // const cardEl = renderCard(data).render();
