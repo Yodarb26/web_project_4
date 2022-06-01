@@ -12,7 +12,7 @@ export default class Section {
       // const addCardPopup = document.querySelector("#add-card-popup");
       // this._addCardPopup = document.querySelector(`.${addCardPopup}`);
       // this._addCardPopup = document.querySelector(items);
-      // this._element = document.querySelector(`${containerSelector}`);
+      this._element = document.querySelector(`${containerSelector}`);
   }
 
   renderItems(element) {
