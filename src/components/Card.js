@@ -1,7 +1,9 @@
 import Popup from "./Popup";
 
+//deconstruct
 export default class Card extends Popup {
   constructor({data, handleCardPreview}, template, popupSelector) {
+    // constructor({data, handleCardPreview, handleCardClick}, template, popupSelector) {
     super(popupSelector);
     this._template = template;
     this._data = data;
@@ -20,13 +22,13 @@ export default class Card extends Popup {
   }
 
   //Card preview handler when clicked on
-  _handleCardPreview = () => {
-    modalImageElement.src = this._url;
-    modalCaption.textContent = this._title;
-    modalImageElement.alt =`image of${url}`;
+  // _handleCardPreview = () => {
+  //   // modalImageElement.src = this._url;
+  //   // modalCaption.textContent = this._title;
+  //   // modalImageElement.alt =`image of${url}`;
 
-    openPopup(imagePopup);
-  };
+  //   openPopup(imagePopup);
+  // };
 
   //Card like handler/toggler
   _handleLikeIcon = () => {
@@ -49,7 +51,11 @@ export default class Card extends Popup {
       this._handleDeleteCard(evt);
     });
     this._imageElement.addEventListener("click", (evt) => { //card preview event listener
-      this._handleCardPreview(evt);
+      // this._handleCardPreview();
+      // this._handleCardPreview(evt);
+      this._handleCardPreview({url:this._data.url, title: this._data.title});
+      // console.log(evt.target)
+      // this._handleCardClick({url:data.url, title: data.title})
     });
   };
 
