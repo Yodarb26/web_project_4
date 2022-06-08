@@ -11,7 +11,6 @@ import { initialCards, selectors } from "../utils/constants";
 
 // const image = this._popupElement.querySelector(".modal__popup-image");
 const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
-CardPreviewPopup.setEventListeners();
 
 const cardDisplay = document.querySelector(selectors.cardTemplate);
 
@@ -29,6 +28,7 @@ const CardSection =  new Section ({
 );
 
 CardSection.renderItems(initialCards);
+CardPreviewPopup.setEventListeners();
 
 // const CardSection =  new Section ({
 //   renderer: (item) => {

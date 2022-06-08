@@ -25,10 +25,6 @@ open(data) {
   this._modalImageElement.src = data.url;
   this._modalImageElement.alt =`image of${data.url}`;
   this._modalCaption.textContent = data.title;
-  // this._modalImageElement.src = url;
-  // this._modalImageElement.alt =`image of${url}`;
-  // this._modalCaption.textContent = title;
-  // this._modalCaption = data.title;
   super.open();
  }
 }
