@@ -41,5 +41,7 @@ export const formValidatorConfig = {
 export const selectors = {
   cardSection: ".elements-grid__cards", //card list
   cardTemplate: "#card-template",//card template
-  previewPopup: "modal__popup_type_image",
+  // previewPopup: "modal__popup_type_image",
+  previewPopup: "#image-popup"
+
 }

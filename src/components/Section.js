@@ -7,11 +7,6 @@ export default class Section {
       // super(popupSelector);
       this._items = items;
       this._renderer = renderer;
-      // this._containerSelector = document.querySelector(containerSelector);
-      // this._containerSelector = document.querySelector(`${containerSelector}`);
-      // const addCardPopup = document.querySelector("#add-card-popup");
-      // this._addCardPopup = document.querySelector(`.${addCardPopup}`);
-      // this._addCardPopup = document.querySelector(items);
       this._element = document.querySelector(`${containerSelector}`);
   }
 
@@ -23,7 +18,6 @@ export default class Section {
 
   addItem(element) {
     this._element.prepend(element);
-  // this._element.append(element);
   }
 }
 

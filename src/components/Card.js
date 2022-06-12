@@ -53,6 +53,7 @@ export default class Card extends Popup {
     this._imageElement.addEventListener("click", (evt) => { //card preview event listener
       // this._handleCardPreview();
       // this._handleCardPreview(evt);
+      debugger;
       this._handleCardPreview({url:this._data.url, title: this._data.title});
       // console.log(evt.target)
       // this._handleCardClick({url:data.url, title: data.title})

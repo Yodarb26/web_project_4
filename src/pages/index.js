@@ -17,29 +17,18 @@ const cardDisplay = document.querySelector(selectors.cardTemplate);
 const CardSection =  new Section ({
   renderer: (item) => {
     const cardEl = new Card({ data:item, handleCardPreview: (imgData) => {
+    debugger;
           CardPreviewPopup.open(imgData);
     }
   }, cardDisplay);
     CardSection.addItem(cardEl.render());
   },
 },
-  // selector: selectors.cardSection,
   selectors.cardSection,
 );
 
 CardSection.renderItems(initialCards);
 CardPreviewPopup.setEventListeners();
-
-// const CardSection =  new Section ({
-//   renderer: (item) => {
-//     const cardEl = new Card({ data:item }, cardDisplay);
-//     CardSection.addItem(cardEl.render());
-//   },
-// },
-//   selectors.cardSection,
-// );
-
-// CardSection.renderItems(initialCards);
 
 
 
