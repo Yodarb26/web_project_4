@@ -17,7 +17,6 @@ const cardDisplay = document.querySelector(selectors.cardTemplate);
 const CardSection =  new Section ({
   renderer: (item) => {
     const cardEl = new Card({ data:item, handleCardPreview: (imgData) => {
-    debugger;
           CardPreviewPopup.open(imgData);
     }
   }, cardDisplay);
