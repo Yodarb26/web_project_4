@@ -73,5 +73,4 @@ export default class Card extends Popup {
     return this._element;
   };
 }
-
 // export default Card;

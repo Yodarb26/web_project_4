@@ -1,10 +1,7 @@
 // import Popup from "./Popup";
 
 export default class Section {
-  // const addCardPopup = document.querySelector("#add-card-popup");
-  // constructor({items, renderer}, template){
     constructor({items, renderer}, containerSelector){
-      // super(popupSelector);
       this._items = items;
       this._renderer = renderer;
       this._element = document.querySelector(`${containerSelector}`);
@@ -21,3 +18,7 @@ export default class Section {
   }
 }
 
+// // function renderCard(data) {
+// //   const card = new Card(cardTemplate, data);
+// //   addCardToPage(card.render(data));
+// }

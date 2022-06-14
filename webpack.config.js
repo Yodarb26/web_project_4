@@ -18,7 +18,7 @@ module.exports = {
         compress: true,
         open: true,
         static: "./dist",
-        port: 5501,
+        port: 8080
     },
     module: {
         rules: [
