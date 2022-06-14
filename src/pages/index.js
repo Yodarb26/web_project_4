@@ -26,31 +26,21 @@ import {
   imagePopup,
   modalImageElement,
   modalCaption,
-
-
 } from "../utils/constants";
 
-// import { initialCards, formValidatorConfig, selectors, editFormBtn, profilePopup} from "../utils/constants";
-
-// const pro = document.querySelector(".profile__title");
-// const sub = document.querySelector(".profile__subtitle");
-
+const pro = document.querySelector(".profile__title");
+const sub = document.querySelector(".profile__subtitle");
 
 const formProfileDetail = new UserInfo({userName:proTitle, userDetail: proSubTitle});
-// const modalPopUp = document.querySelector(".modal__popup");
 
 const formProfileName = new PopupWithForm({
   formSubmit: ({userName, userDetail}) => {
-    console.log(4),
     formProfileDetail.setUserInfo(userName, userDetail);
   }
 },  ".modal__popup");
 
 formProfileName.setEventListeners();
-// formProfileName.formSubmit({});
-console.log(formProfileName)
 
-// const image = this._popupElement.querySelector(".modal__popup-image");
 const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
 const cardDisplay = document.querySelector(selectors.cardTemplate);
 
@@ -68,7 +58,15 @@ const CardSection =  new Section ({
 
 CardSection.renderItems(initialCards);
 CardPreviewPopup.setEventListeners();
+///profile edit button
+// editFormBtn.addEventListener('click', () => {console.log("profile edit button")})
+editFormBtn.addEventListener('click', () => {
+ formProfileName(profilePopup);
+  });
 
+//add card button
+addCardBtn.addEventListener('click', () => {
+  console.log("add card button")})
 
 const addFormEl = formCard.querySelector(".form-name");
 const editFormEl = formProfile.querySelector(".form-name");
