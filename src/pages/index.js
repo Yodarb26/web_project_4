@@ -30,19 +30,6 @@ import {
 } from "../utils/constants";
 
 const formProfileDetail = new UserInfo({userName:proTitle, userDetail: proSubTitle});
-const formProfileName = new PopupWithForm({
-  formSubmit: ({userName, userDetail}) => {
-    formProfileDetail.setUserInfo(userName, userDetail);
-  }
-},  "#edit-profile-popup");
-formProfileName.setEventListeners();
-
-const formProfileCard = new PopupWithForm({
-  formSubmit: ({userName, userDetail}) => {
-    formProfileDetail.setUserInfo(userName, userDetail);
-  }
-},  "#add-card-popup");
-formProfileCard.setEventListeners();
 
 const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
 const cardDisplay = document.querySelector(selectors.cardTemplate);
@@ -61,6 +48,22 @@ const CardSection =  new Section ({
 
 CardSection.renderItems(initialCards);
 CardPreviewPopup.setEventListeners();
+
+//Profile modal
+const formProfileName = new PopupWithForm({
+  formSubmit: ({userName, userDetail}) => {
+    formProfileDetail.setUserInfo(userName, userDetail);
+  }
+},  "#edit-profile-popup");
+formProfileName.setEventListeners();
+
+//Card modal
+const formProfileCard = new PopupWithForm({
+  formSubmit: ({userName, userDetail}) => {
+    formProfileDetail.setUserInfo(userName, userDetail);
+  }
+},  "#add-card-popup");
+formProfileCard.setEventListeners();
 
 ///profile edit button
 editFormBtn.addEventListener('click', () => {
