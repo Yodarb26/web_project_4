@@ -22,24 +22,27 @@ import {
   closeProfileButton,
   proTitle,
   proSubTitle,
-
+  addFormEl,
+  editFormEl,
   imagePopup,
   modalImageElement,
   modalCaption,
 } from "../utils/constants";
 
-const pro = document.querySelector(".profile__title");
-const sub = document.querySelector(".profile__subtitle");
-
 const formProfileDetail = new UserInfo({userName:proTitle, userDetail: proSubTitle});
-
 const formProfileName = new PopupWithForm({
   formSubmit: ({userName, userDetail}) => {
     formProfileDetail.setUserInfo(userName, userDetail);
   }
-},  ".modal__popup");
-
+},  "#edit-profile-popup");
 formProfileName.setEventListeners();
+
+const formProfileCard = new PopupWithForm({
+  formSubmit: ({userName, userDetail}) => {
+    formProfileDetail.setUserInfo(userName, userDetail);
+  }
+},  "#add-card-popup");
+formProfileCard.setEventListeners();
 
 const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
 const cardDisplay = document.querySelector(selectors.cardTemplate);
@@ -58,23 +61,14 @@ const CardSection =  new Section ({
 
 CardSection.renderItems(initialCards);
 CardPreviewPopup.setEventListeners();
+
 ///profile edit button
-// editFormBtn.addEventListener('click', () => {console.log("profile edit button")})
 editFormBtn.addEventListener('click', () => {
- formProfileName(profilePopup);
+ formProfileName.open();
   });
 
 //add card button
 addCardBtn.addEventListener('click', () => {
-  console.log("add card button")})
-
-const addFormEl = formCard.querySelector(".form-name");
-const editFormEl = formProfile.querySelector(".form-name");
-
-const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
-// addFormValidator.enableValidation(".form-name");
-addFormValidator.enableValidation();
-const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
-// editFormValidator.enableValidation(".form-name");
-editFormValidator.enableValidation();
+  formProfileCard.open();
+});
 

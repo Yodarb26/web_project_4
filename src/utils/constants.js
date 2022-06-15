@@ -43,8 +43,10 @@ export const selectors = {
   cardTemplate: "#card-template",//card template
   previewPopup: "#image-popup",// card image popup preview
   // modalPopUp: ".modal__popup",
-
 }
+
+// export const addFormEl = formCard.querySelector(".form-name");
+// export const editFormEl = formProfile.querySelector(".form-name");
 
 export const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
 export const addCardPopup = document.querySelector("#add-card-popup");
@@ -60,6 +62,6 @@ export const closeProfileButton = document.querySelector("#close-profile-popup")
 export const proTitle =  document.querySelector(".profile__title");
 export const proSubTitle =  document.querySelector(".profile__subtitle");
 
-export const imagePopup = document.querySelector("#image-popup");
-export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
-export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+// export const imagePopup = document.querySelector("#image-popup");
+// export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+// export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
