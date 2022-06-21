@@ -5,9 +5,9 @@ export default class UserInfo {
   };
 
   getUserInfo() {
-    console.log("get--User---Info");
-    console.log(this._userName.textContent);
-    console.log(this._userDetail.textContent);
+    // console.log("get--User---Info");
+    // console.log(this._userName.textContent);
+    // console.log(this._userDetail.textContent);
     return {
       userProfileName: this._userName.textContent,
       userProfileDetail: this._userDetail.textContent
@@ -15,9 +15,9 @@ export default class UserInfo {
   }
 
   setUserInfo( userName, userDetail) {
-    console.log("set--User---Info");
-    console.log(this._userName.textContent);
-    console.log(this._userDetail.textContent);
+    // console.log("set--User---Info");
+    // console.log(this._userName.textContent);
+    // console.log(this._userDetail.textContent);
     this._userName.textContent = userName;
     this._userDetail.textContent = userDetail;
   }
