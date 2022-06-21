@@ -61,7 +61,9 @@ export default class FormValidator {
   }
 
   resetForm() {
-    this._formEl.reset();
+    // this._formEl.reset();
+    console.log(333333);
+    console.log(4444444);
     this._toggleButton();
   }
 
@@ -71,5 +73,5 @@ export default class FormValidator {
     });
     this._setEventListeners();
   }
-}
+};
 

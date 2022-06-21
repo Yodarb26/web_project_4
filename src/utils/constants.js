@@ -45,13 +45,12 @@ export const selectors = {
   // modalPopUp: ".modal__popup",
 }
 
+// export const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
+// export const addCardPopup = document.querySelector("#add-card-popup");
+// export const formProfile = document.querySelector("#edit-profile-popup");
+// export const formCard = document.querySelector("#add-card-popup");
 // export const addFormEl = formCard.querySelector(".form-name");
 // export const editFormEl = formProfile.querySelector(".form-name");
-
-export const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
-export const addCardPopup = document.querySelector("#add-card-popup");
-export const formProfile = document.querySelector("#edit-profile-popup");
-export const formCard = document.querySelector("#add-card-popup");
 
 export const addCardBtn = document.querySelector(".profile__plus-button");
 export const editFormBtn = document.querySelector(".profile__edit-button");
@@ -62,6 +61,17 @@ export const closeProfileButton = document.querySelector("#close-profile-popup")
 export const proTitle =  document.querySelector(".profile__title");
 export const proSubTitle =  document.querySelector(".profile__subtitle");
 
-// export const imagePopup = document.querySelector("#image-popup");
-// export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
-// export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+export const imagePopup = document.querySelector("#image-popup");
+export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+
+export const proModalName = document.querySelector("#list-title");
+export const proModalWork = document.querySelector("#list-subtitle");
+
+export const modalCardTitle = document.querySelector("#card-title");
+export const modalCardUrl = document.querySelector("#card-url");
+
+export const addFormEl = document.querySelector("#add-card-popup");
+export const editFormEl = document.querySelector("#edit-profile-popup");
+
+

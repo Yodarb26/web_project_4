@@ -51,11 +51,7 @@ export default class Card extends Popup {
       this._handleDeleteCard(evt);
     });
     this._imageElement.addEventListener("click", (evt) => { //card preview event listener
-      // this._handleCardPreview();
-      // this._handleCardPreview(evt);
       this._handleCardPreview({url:this._data.url, title: this._data.title});
-      // console.log(evt.target)
-      // this._handleCardClick({url:data.url, title: data.title})
     });
   };
 
@@ -73,4 +69,3 @@ export default class Card extends Popup {
     return this._element;
   };
 }
-// export default Card;

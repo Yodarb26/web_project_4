@@ -11,30 +11,46 @@ import {
   initialCards,
   formValidatorConfig,
   selectors,
-  profilePopup,
-  addCardPopup,
-  formProfile,
-  formCard,
   addCardBtn,
   editFormBtn,
-  closeCardButton,
-  closeImagePreviewButton,
-  closeProfileButton,
   proTitle,
   proSubTitle,
+  proModalWork,
+  proModalName,
   addFormEl,
   editFormEl,
-  imagePopup,
-  modalImageElement,
-  modalCaption,
+  modalCardTitle,
+  modalCardUrl,
+  // closeCardButton,
+  // closeImagePreviewButton,
+  // closeProfileButton,
+  // imagePopup,
+  // modalImageElement,
+  // modalCaption,
 } from "../utils/constants";
 
-const formProfileDetail = new UserInfo({userName:proTitle, userDetail: proSubTitle});
+const formProfileDetail = new UserInfo({
+  userName: proTitle,
+  userDetail: proSubTitle,
+});
 
-const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
-const cardDisplay = document.querySelector(selectors.cardTemplate);
+
+// const newCard = (data) => {
+//   const cardEls = new Card(
+//     {
+//       data,
+//       handleCardPreview: () => {
+//         CardPreviewPopup.open(imgData);
+//       },
+//     },
+//     selectors.cardTemplate,
+//   );
+//   return cardEls.render();
+// }
+
 
 const CardSection =  new Section ({
+  // data: initialCards,
   renderer: (item) => {
     const cardEl = new Card({ data:item, handleCardPreview: (imgData) => {
           CardPreviewPopup.open(imgData);
@@ -46,8 +62,8 @@ const CardSection =  new Section ({
   selectors.cardSection,
 );
 
-CardSection.renderItems(initialCards);
-CardPreviewPopup.setEventListeners();
+const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
+const cardDisplay = document.querySelector(selectors.cardTemplate);
 
 //Profile modal
 const formProfileName = new PopupWithForm({
@@ -55,23 +71,56 @@ const formProfileName = new PopupWithForm({
     formProfileDetail.setUserInfo(userName, userDetail);
   }
 },  "#edit-profile-popup");
-formProfileName.setEventListeners();
 
 //Card modal
+//can't be a username +its detail when adding a card
 const formProfileCard = new PopupWithForm({
-  formSubmit: ({userName, userDetail}) => {
-    formProfileDetail.setUserInfo(userName, userDetail);
-  }
+  formSubmit: (cardTemplate, data) => {
+  const cardEl = new Card(cardTemplate, data);
+  CardSection.addCardToPage(cardEl.render(data));
+    },
 },  "#add-card-popup");
-formProfileCard.setEventListeners();
 
-///profile edit button
-editFormBtn.addEventListener('click', () => {
- formProfileName.open();
-  });
+
+// const editFormValidator = new FormValidator(
+//   formValidatorConfig,
+//   selectors.previewPopup
+//   );
+
+// const addFormValidator = new FormValidator(
+//   formValidatorConfig,
+//   selectors.previewPopup
+//   );
+
+formProfileName.setEventListeners();
+formProfileCard.setEventListeners();
+CardPreviewPopup.setEventListeners();
+CardSection.renderItems(initialCards);
+
 
 //add card button
 addCardBtn.addEventListener('click', () => {
   formProfileCard.open();
+  // addFormValidator.resetForm();
+
 });
+
+///profile edit button
+editFormBtn.addEventListener('click', () => {
+  const activeUser = formProfileDetail.getUserInfo();
+  console.log(activeUser);
+  proModalName.value = activeUser.userProfileName;
+  proModalWork.value = activeUser.userProfileDetail;
+  formProfileName.open();
+  // proTitle.value = activeUser.userName;
+  // proSubTitle.value = activeUser.userDetail;
+  // proModalName.value = activeUser.userName;
+  // proModalMission.value = activeUser.userDetail;
+ //  editFormValidator.resetForm();
+   });
+
+  const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
+  addFormValidator.enableValidation();
+  const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
+  editFormValidator.enableValidation();
 
