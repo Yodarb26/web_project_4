@@ -64,6 +64,7 @@ export const proSubTitle =  document.querySelector(".profile__subtitle");
 export const imagePopup = document.querySelector("#image-popup");
 export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
 export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
+//modal__popup-image
 
 export const proModalName = document.querySelector("#list-title");
 export const proModalWork = document.querySelector("#list-subtitle");

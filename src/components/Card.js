@@ -21,15 +21,6 @@ export default class Card extends Popup {
         // return this._element;
   }
 
-  //Card preview handler when clicked on
-  // _handleCardPreview = () => {
-  //   // modalImageElement.src = this._url;
-  //   // modalCaption.textContent = this._title;
-  //   // modalImageElement.alt =`image of${url}`;
-
-  //   openPopup(imagePopup);
-  // };
-
   //Card like handler/toggler
   _handleLikeIcon = () => {
     this._cardLikeButton.classList

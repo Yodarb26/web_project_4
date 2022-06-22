@@ -5,9 +5,9 @@ export default class Popup {
     }
 
     _handleEscUp(evt) {
+      //evt.preventDefault();
       if (evt.key === "Escape") {
         evt.preventDefault();
-        // closePopup(document.querySelector(".modal_opened"));
         this.close();
       }
     }

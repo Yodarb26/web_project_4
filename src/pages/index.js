@@ -21,6 +21,9 @@ import {
   editFormEl,
   modalCardTitle,
   modalCardUrl,
+  imagePopup,
+  modalImageElement,
+  modalCaption,
   // closeCardButton,
   // closeImagePreviewButton,
   // closeProfileButton,
@@ -33,21 +36,6 @@ const formProfileDetail = new UserInfo({
   userName: proTitle,
   userDetail: proSubTitle,
 });
-
-
-// const newCard = (data) => {
-//   const cardEls = new Card(
-//     {
-//       data,
-//       handleCardPreview: () => {
-//         CardPreviewPopup.open(imgData);
-//       },
-//     },
-//     selectors.cardTemplate,
-//   );
-//   return cardEls.render();
-// }
-
 
 const CardSection =  new Section ({
   // data: initialCards,
@@ -75,22 +63,19 @@ const formProfileName = new PopupWithForm({
 //Card modal
 //can't be a username +its detail when adding a card
 const formProfileCard = new PopupWithForm({
-  formSubmit: (cardTemplate, data) => {
-  const cardEl = new Card(cardTemplate, data);
+  formSubmit: ({data, cardTemplate}) => {
+  const cardEl = new Card(data, cardTemplate);
   CardSection.addCardToPage(cardEl.render(data));
     },
 },  "#add-card-popup");
 
+// const formProfileCard = new PopupWithForm({
+//   formSubmit: (data) => {
+//   const cardEl = new Card(data);
+//   CardSection.addCardToPage(cardEl.render(data));
+//     },
+// },  "#add-card-popup");
 
-// const editFormValidator = new FormValidator(
-//   formValidatorConfig,
-//   selectors.previewPopup
-//   );
-
-// const addFormValidator = new FormValidator(
-//   formValidatorConfig,
-//   selectors.previewPopup
-//   );
 
 formProfileName.setEventListeners();
 formProfileCard.setEventListeners();
@@ -100,22 +85,23 @@ CardSection.renderItems(initialCards);
 
 //add card button
 addCardBtn.addEventListener('click', () => {
+  modalCardTitle.value = modalImageElement.textContent;
+  modalCardUrl.value = modalCaption.src;
   formProfileCard.open();
+  // console.log(imagePopup);
+  // console.log(modalImageElement);
+  // console.log(modalCaption);
+  // console.log(modalCardTitle);
+  // console.log(formProfileCard);
   // addFormValidator.resetForm();
-
 });
 
 ///profile edit button
 editFormBtn.addEventListener('click', () => {
+  formProfileName.open();
   const activeUser = formProfileDetail.getUserInfo();
-  console.log(activeUser);
   proModalName.value = activeUser.userProfileName;
   proModalWork.value = activeUser.userProfileDetail;
-  formProfileName.open();
-  // proTitle.value = activeUser.userName;
-  // proSubTitle.value = activeUser.userDetail;
-  // proModalName.value = activeUser.userName;
-  // proModalMission.value = activeUser.userDetail;
  //  editFormValidator.resetForm();
    });
 
