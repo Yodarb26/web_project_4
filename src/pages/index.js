@@ -63,9 +63,9 @@ const formProfileName = new PopupWithForm({
 //Card modal
 //can't be a username +its detail when adding a card
 const formProfileCard = new PopupWithForm({
-  formSubmit: ({data, cardTemplate}) => {
+  formSubmit: (data, cardTemplate) => {
   const cardEl = new Card(data, cardTemplate);
-  CardSection.addCardToPage(cardEl.render(data));
+  CardSection.addCardToPage(cardEl.render(data, cardTemplate));
     },
 },  "#add-card-popup");
 

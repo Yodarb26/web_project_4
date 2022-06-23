@@ -15,6 +15,7 @@ export default class PopupWithForm extends Popup {
           this._allInputEl[inputEl.name] = inputEl.value;
           // this._allInputEl.name = inputEl.name,
           // this._allInputEl.value = inputEl.value,
+          // return this._allInputEl;
   });
     return this._allInputEl;
   }

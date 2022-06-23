@@ -1,24 +1,23 @@
-import Popup from "./Popup";
+// import Popup from "./Popup";
 
 //deconstruct
-export default class Card extends Popup {
-  constructor({data, handleCardPreview}, template, popupSelector) {
+// export default class Card extends Popup {
+  export default class Card {
+  constructor({data, handleCardPreview}, template) {
+  // constructor({data, handleCardPreview}, template, popupSelector) {
     // constructor({data, handleCardPreview, handleCardClick}, template, popupSelector) {
-    super(popupSelector);
-    this._template = template;
+    // super(popupSelector);
     this._data = data;
     this._title = data.title;
     this._url = data.url;
     this._element = null;
     this._handleCardPreview = handleCardPreview;
-    // this._handleCardClick = handleCardClick;
+    this._template = template;
   }
 
   // Card template
   _getElement = () => {
      return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
-    // this._element = this._template.content.querySelector(".elements-grid__card").cloneNode(true);
-        // return this._element;
   }
 
   //Card like handler/toggler
@@ -51,11 +50,11 @@ export default class Card extends Popup {
     this._element = this._getElement();
     this._imageElement = this._element.querySelector(".elements-grid__image");
     this._titleElement = this._element.querySelector(".elements-grid__text");
+    this._deleteCard = this._element.querySelector(".elements-grid__delete-button");
+    this._cardLikeButton = this._element.querySelector(".elements-grid__icon");
     this._imageElement.src = this._url;
     this._imageElement.alt = this._url;
     this._titleElement.textContent = this._title;
-    this._deleteCard = this._element.querySelector(".elements-grid__delete-button");
-    this._cardLikeButton = this._element.querySelector(".elements-grid__icon");
     this._setEventListeners();
     return this._element;
   };
