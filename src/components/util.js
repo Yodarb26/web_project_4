@@ -22,5 +22,4 @@ export function pressEscKey(e) {
   }
 }
 
-// export { openPopup, closePopup, clickOutsideOverlay, pressEscKey };
 

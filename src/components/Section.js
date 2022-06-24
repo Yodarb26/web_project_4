@@ -17,8 +17,3 @@ export default class Section {
     this._element.prepend(element);
   }
 }
-
-// // function renderCard(data) {
-// //   const card = new Card(cardTemplate, data);
-// //   addCardToPage(card.render(data));
-// }

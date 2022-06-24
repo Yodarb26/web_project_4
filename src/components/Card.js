@@ -1,22 +1,17 @@
-// import Popup from "./Popup";
 
-//deconstruct
-// export default class Card extends Popup {
   export default class Card {
-  constructor({data, handleCardPreview}, template) {
-  // constructor({data, handleCardPreview}, template, popupSelector) {
-    // constructor({data, handleCardPreview, handleCardClick}, template, popupSelector) {
-    // super(popupSelector);
-    this._data = data;
-    this._title = data.title;
-    this._url = data.url;
+  constructor(data,template) {
+    this._data = data.data;
+    this._title = data.data.title;
+    this._url = data.data.url;
     this._element = null;
-    this._handleCardPreview = handleCardPreview;
+    this._handleCardPreview = data.handleCardPreview;
     this._template = template;
   }
 
   // Card template
   _getElement = () => {
+
      return this._template.content.querySelector(".elements-grid__card").cloneNode(true);
   }
 

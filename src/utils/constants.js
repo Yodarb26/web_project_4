@@ -28,7 +28,6 @@ export const initialCards = [
   },
 ];
 
-
 export const formValidatorConfig = {
   inputSelector: ".form-name__input",
   submitButtonSelector: ".form-name__save-button",
@@ -37,20 +36,11 @@ export const formValidatorConfig = {
   errorClass: "modal__popup__error_visible",
 };
 
-
 export const selectors = {
   cardSection: ".elements-grid__cards", //card list
   cardTemplate: "#card-template",//card template
   previewPopup: "#image-popup",// card image popup preview
-  // modalPopUp: ".modal__popup",
 }
-
-// export const profilePopup = document.querySelector("#edit-profile-popup"); //.popup__form
-// export const addCardPopup = document.querySelector("#add-card-popup");
-// export const formProfile = document.querySelector("#edit-profile-popup");
-// export const formCard = document.querySelector("#add-card-popup");
-// export const addFormEl = formCard.querySelector(".form-name");
-// export const editFormEl = formProfile.querySelector(".form-name");
 
 export const addCardBtn = document.querySelector(".profile__plus-button");
 export const editFormBtn = document.querySelector(".profile__edit-button");
@@ -64,7 +54,6 @@ export const proSubTitle =  document.querySelector(".profile__subtitle");
 export const imagePopup = document.querySelector("#image-popup");
 export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
 export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
-//modal__popup-image
 
 export const proModalName = document.querySelector("#list-title");
 export const proModalWork = document.querySelector("#list-subtitle");

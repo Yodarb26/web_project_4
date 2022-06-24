@@ -7,7 +7,6 @@ export default class PopupWithImages extends Popup {
     this._modalCaption = this._popupElement.querySelector(".modal__popup-caption");
  }
 
-
 open(data) {
   this._modalImageElement.src = data.url;
   this._modalImageElement.alt =`image of${data.url}`;
