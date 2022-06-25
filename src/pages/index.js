@@ -1,12 +1,12 @@
-import './index.css';
+import "./index.css";
 
 //import all classes
 import Card from "../components/Card";
 import FormValidator from "../components/FormValidator";
-import PopupWithImages from '../components/PopupWithImages';
-import PopupWithForm from '../components/PopupWithForm';
+import PopupWithImages from "../components/PopupWithImages";
+import PopupWithForm from "../components/PopupWithForm";
 import Section from "../components/Section";
-import UserInfo from '../components/UserInfo';
+import UserInfo from "../components/UserInfo";
 import {
   initialCards,
   formValidatorConfig,
@@ -25,46 +25,61 @@ import {
   modalCaption,
 } from "../utils/constants";
 
-
 const formProfileDetail = new UserInfo({
   userName: proTitle,
   userDetail: proSubTitle,
 });
 
-const CardSection =  new Section ({
-  data: initialCards,
-  renderer: (item) => {
-    const cardEl = new Card({ data:item, handleCardPreview: (imgData) => {
-          CardPreviewPopup.open(imgData);
-    }
-  }, cardDisplay);
-    CardSection.addItem(cardEl.render());
+const CardSection = new Section(
+  {
+    data: initialCards,
+    renderer: (item) => {
+      const cardEl = new Card(
+        {
+          data: item,
+          handleCardPreview: (imgData) => {
+            CardPreviewPopup.open(imgData);
+          },
+        },
+        cardDisplay
+      );
+      CardSection.addItem(cardEl.render());
+    },
   },
-},
-  selectors.cardSection,
+  selectors.cardSection
 );
 
 const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
 const cardDisplay = document.querySelector(selectors.cardTemplate);
 
 //Profile modal
-const formProfileName = new PopupWithForm({
-  formSubmit: ({userName, userDetail}) => {
-    formProfileDetail.setUserInfo(userName, userDetail);
-  }
-},  "#edit-profile-popup");
+const formProfileName = new PopupWithForm(
+  {
+    formSubmit: ({ userName, userDetail }) => {
+      formProfileDetail.setUserInfo(userName, userDetail);
+    },
+  },
+  "#edit-profile-popup"
+);
 
 //Card modal
-const formProfileCard = new PopupWithForm({
+const formProfileCard = new PopupWithForm(
+  {
     formSubmit: (data, cardTemplate) => {
-  const cardEl = new Card({data:data, handleCardPreview: (imgData) => {
-    CardPreviewPopup.open(imgData);
-        }
-}, cardDisplay);
-CardSection.addItem(cardEl.render(data, cardTemplate));
-  // CardSection.addCardToPage(cardEl.render(data, cardTemplate));
+      const cardEl = new Card(
+        {
+          data: data,
+          handleCardPreview: (imgData) => {
+            CardPreviewPopup.open(imgData);
+          },
+        },
+        cardDisplay
+      );
+      CardSection.addItem(cardEl.render(data, cardTemplate));
     },
-},  "#add-card-popup");
+  },
+  "#add-card-popup"
+);
 
 formProfileName.setEventListeners();
 formProfileCard.setEventListeners();
@@ -72,7 +87,7 @@ CardPreviewPopup.setEventListeners();
 CardSection.renderItems(initialCards);
 
 //add card button
-addCardBtn.addEventListener('click', () => {
+addCardBtn.addEventListener("click", () => {
   modalCardTitle.value = modalImageElement.textContent;
   modalCardUrl.value = modalCaption.src;
   formProfileCard.open();
@@ -80,16 +95,16 @@ addCardBtn.addEventListener('click', () => {
 });
 
 ///profile edit button
-editFormBtn.addEventListener('click', () => {
+editFormBtn.addEventListener("click", () => {
   formProfileName.open();
   const activeUser = formProfileDetail.getUserInfo();
   proModalName.value = activeUser.userProfileName;
   proModalWork.value = activeUser.userProfileDetail;
   editFormValidator.resetForm();
-   });
+});
 
-  const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
-  addFormValidator.enableValidation();
-  const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
-  editFormValidator.enableValidation();
+const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
+addFormValidator.enableValidation();
+const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
+editFormValidator.enableValidation();
 

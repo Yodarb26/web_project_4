@@ -1,10 +1,8 @@
-// import Popup from "./Popup";
-
 export default class Section {
-    constructor({items, renderer}, containerSelector){
-      this._items = items;
-      this._renderer = renderer;
-      this._element = document.querySelector(`${containerSelector}`);
+  constructor({ items, renderer }, containerSelector) {
+    this._items = items;
+    this._renderer = renderer;
+    this._element = document.querySelector(`${containerSelector}`);
   }
 
   renderItems(element) {

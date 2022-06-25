@@ -38,21 +38,26 @@ export const formValidatorConfig = {
 
 export const selectors = {
   cardSection: ".elements-grid__cards", //card list
-  cardTemplate: "#card-template",//card template
-  previewPopup: "#image-popup",// card image popup preview
-}
+  cardTemplate: "#card-template", //card template
+  previewPopup: "#image-popup", // card image popup preview
+};
 
 export const addCardBtn = document.querySelector(".profile__plus-button");
 export const editFormBtn = document.querySelector(".profile__edit-button");
 export const closeCardButton = document.querySelector("#close-card-popup");
-export const closeImagePreviewButton = document.querySelector("#close-image-popup");
-export const closeProfileButton = document.querySelector("#close-profile-popup");
+export const closeImagePreviewButton =
+  document.querySelector("#close-image-popup");
+export const closeProfileButton = document.querySelector(
+  "#close-profile-popup"
+);
 
-export const proTitle =  document.querySelector(".profile__title");
-export const proSubTitle =  document.querySelector(".profile__subtitle");
+export const proTitle = document.querySelector(".profile__title");
+export const proSubTitle = document.querySelector(".profile__subtitle");
 
 export const imagePopup = document.querySelector("#image-popup");
-export const modalImageElement = imagePopup.querySelector(".modal__popup-image");
+export const modalImageElement = imagePopup.querySelector(
+  ".modal__popup-image"
+);
 export const modalCaption = imagePopup.querySelector(".modal__popup-caption");
 
 export const proModalName = document.querySelector("#list-title");
