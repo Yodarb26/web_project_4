@@ -14,7 +14,6 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        // contentBase: path.resolve(__dirname, "./dist"),
         compress: true,
         open: true,
         static: "./dist",
@@ -25,7 +24,6 @@ module.exports = {
             {
                 test: /\.js/i,
                 use:"babel-loader",
-                // loader: "babel-loader",
             },
             {
                 test: /\.css$/i,
@@ -43,7 +41,6 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-                // use:['file-loader']
             },
         ],
     },
