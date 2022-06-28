@@ -17,6 +17,13 @@ export default class PopupWithImages extends Popup {
     this._modalCaption.textContent = data.title;
     super.open();
   }
+  // open({url, title}) {
+  //   this._modalImageElement.src = url;
+  //   this._modalImageElement.alt = `image of${url}`;
+  //   this._modalCaption.textContent = title;
+  //   super.open();
+  // }
+
 }
 
 

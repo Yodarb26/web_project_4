@@ -60,7 +60,6 @@ export default class FormValidator {
   }
 
   resetForm() {
-    // this._formEl.reset();
     this._toggleButton();
   }
 

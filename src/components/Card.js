@@ -23,7 +23,7 @@
     //Card removal handler
     _handleDeleteCard = () => {
       this._element.remove();
-      this.element = null;
+      // this.element = null;
     };
 
     //Event listeners

@@ -1,3 +1,4 @@
+
 import "./index.css";
 
 //import all classes
@@ -19,43 +20,43 @@ import {
   proModalName,
   addFormEl,
   editFormEl,
-  modalCardTitle,
-  modalCardUrl,
-  modalImageElement,
-  modalCaption,
 } from "../utils/constants";
+
+// function renderCard(data) {
+//   const card = new Card(...);
+//   cardSection.addItem(...);
+// }
 
 const formProfileDetail = new UserInfo({
   userName: proTitle,
   userDetail: proSubTitle,
 });
 
-const CardSection = new Section(
+const cardListSections = new Section(
   {
-    data: initialCards,
     renderer: (item) => {
       const cardEl = new Card(
         {
           data: item,
           handleCardPreview: (imgData) => {
-            CardPreviewPopup.open(imgData);
+            cardPreviewPopup.open(imgData);
           },
         },
         cardDisplay
       );
-      CardSection.addItem(cardEl.render());
+      cardListSections.addItem(cardEl.render());
     },
   },
   selectors.cardSection
 );
 
-const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
+const cardPreviewPopup = new PopupWithImages(selectors.previewPopup);
 const cardDisplay = document.querySelector(selectors.cardTemplate);
 
 //Profile modal
 const formProfileName = new PopupWithForm(
   {
-    formSubmit: ({ userName, userDetail }) => {
+    handleFormSubmit: ({ userName, userDetail }) => {
       formProfileDetail.setUserInfo(userName, userDetail);
     },
   },
@@ -65,17 +66,17 @@ const formProfileName = new PopupWithForm(
 //Card modal
 const formProfileCard = new PopupWithForm(
   {
-    formSubmit: (data, cardTemplate) => {
+    handleFormSubmit: (data, cardTemplate) => {
       const cardEl = new Card(
         {
           data: data,
           handleCardPreview: (imgData) => {
-            CardPreviewPopup.open(imgData);
+            cardPreviewPopup.open(imgData);
           },
         },
         cardDisplay
       );
-      CardSection.addItem(cardEl.render(data, cardTemplate));
+      cardListSections.addItem(cardEl.render(data, cardTemplate));
     },
   },
   "#add-card-popup"
@@ -83,13 +84,11 @@ const formProfileCard = new PopupWithForm(
 
 formProfileName.setEventListeners();
 formProfileCard.setEventListeners();
-CardPreviewPopup.setEventListeners();
-CardSection.renderItems(initialCards);
+cardPreviewPopup.setEventListeners();
+cardListSections.renderItems(initialCards);
 
 //add card button
 addCardBtn.addEventListener("click", () => {
-  modalCardTitle.value = modalImageElement.textContent;
-  modalCardUrl.value = modalCaption.src;
   formProfileCard.open();
   addFormValidator.resetForm();
 });
@@ -107,4 +106,3 @@ const addFormValidator = new FormValidator(formValidatorConfig, addFormEl);
 addFormValidator.enableValidation();
 const editFormValidator = new FormValidator(formValidatorConfig, editFormEl);
 editFormValidator.enableValidation();
-
