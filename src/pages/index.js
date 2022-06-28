@@ -32,19 +32,22 @@ const formProfileDetail = new UserInfo({
   userDetail: proSubTitle,
 });
 
+
 const cardListSections = new Section(
   {
-    renderer: (item) => {
-      const cardEl = new Card(
-        {
-          data: item,
-          handleCardPreview: (imgData) => {
-            cardPreviewPopup.open(imgData);
-          },
-        },
-        cardDisplay
-      );
-      cardListSections.addItem(cardEl.render());
+    // renderer: renderCard
+    renderer: (data) => {
+      renderCard(data)
+      // const cardEl = new Card(
+      //   {
+      //     data: item,
+      //     handleCardPreview: (imgData) => {
+      //       cardPreviewPopup.open(imgData);
+      //     },
+      //   },
+      //   cardDisplay
+      // );
+      // cardListSections.addItem(cardEl.render());
     },
   },
   selectors.cardSection
@@ -53,7 +56,7 @@ const cardListSections = new Section(
 const cardPreviewPopup = new PopupWithImages(selectors.previewPopup);
 const cardDisplay = document.querySelector(selectors.cardTemplate);
 
-//Profile modal
+/////////////////////////////////////////////////////////////////////////Profile modal
 const formProfileName = new PopupWithForm(
   {
     handleFormSubmit: ({ userName, userDetail }) => {
@@ -62,21 +65,33 @@ const formProfileName = new PopupWithForm(
   },
   "#edit-profile-popup"
 );
-
-//Card modal
+function renderCard(data, cardTemplate) {
+  const cardEl = new Card(
+    {
+      data,
+      handleCardPreview: (imgData) => {
+        cardPreviewPopup.open(imgData);
+      },
+    },
+    cardDisplay
+  );
+  cardListSections.addItem(cardEl.render(data, cardTemplate));
+}
+///////////////////////////////////////////////////////////////////////////Card modal
 const formProfileCard = new PopupWithForm(
   {
     handleFormSubmit: (data, cardTemplate) => {
-      const cardEl = new Card(
-        {
-          data: data,
-          handleCardPreview: (imgData) => {
-            cardPreviewPopup.open(imgData);
-          },
-        },
-        cardDisplay
-      );
-      cardListSections.addItem(cardEl.render(data, cardTemplate));
+      renderCard(data, cardTemplate);
+      // const cardEl = new Card(
+      //   {
+      //     data: data,
+      //     handleCardPreview: (imgData) => {
+      //       cardPreviewPopup.open(imgData);
+      //     },
+      //   },
+      //   cardDisplay
+      // );
+      // cardListSections.addItem(cardEl.render(data, cardTemplate));
     },
   },
   "#add-card-popup"
