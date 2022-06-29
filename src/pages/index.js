@@ -22,32 +22,28 @@ import {
   editFormEl,
 } from "../utils/constants";
 
-// function renderCard(data) {
-//   const card = new Card(...);
-//   cardSection.addItem(...);
-// }
-
 const formProfileDetail = new UserInfo({
   userName: proTitle,
   userDetail: proSubTitle,
 });
 
+function renderCard(data, cardTemplate) {
+  const cardEl = new Card(
+    {
+      data,
+      handleCardPreview: (imgData) => {
+        cardPreviewPopup.open(imgData);
+      },
+    },
+    cardDisplay
+  );
+  cardListSections.addItem(cardEl.render(data, cardTemplate));
+}
 
 const cardListSections = new Section(
   {
-    // renderer: renderCard
     renderer: (data) => {
       renderCard(data)
-      // const cardEl = new Card(
-      //   {
-      //     data: item,
-      //     handleCardPreview: (imgData) => {
-      //       cardPreviewPopup.open(imgData);
-      //     },
-      //   },
-      //   cardDisplay
-      // );
-      // cardListSections.addItem(cardEl.render());
     },
   },
   selectors.cardSection
@@ -65,33 +61,12 @@ const formProfileName = new PopupWithForm(
   },
   "#edit-profile-popup"
 );
-function renderCard(data, cardTemplate) {
-  const cardEl = new Card(
-    {
-      data,
-      handleCardPreview: (imgData) => {
-        cardPreviewPopup.open(imgData);
-      },
-    },
-    cardDisplay
-  );
-  cardListSections.addItem(cardEl.render(data, cardTemplate));
-}
+
 ///////////////////////////////////////////////////////////////////////////Card modal
 const formProfileCard = new PopupWithForm(
   {
     handleFormSubmit: (data, cardTemplate) => {
       renderCard(data, cardTemplate);
-      // const cardEl = new Card(
-      //   {
-      //     data: data,
-      //     handleCardPreview: (imgData) => {
-      //       cardPreviewPopup.open(imgData);
-      //     },
-      //   },
-      //   cardDisplay
-      // );
-      // cardListSections.addItem(cardEl.render(data, cardTemplate));
     },
   },
   "#add-card-popup"
