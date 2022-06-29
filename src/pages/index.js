@@ -23,8 +23,8 @@ import {
 } from "../utils/constants";
 
 const formProfileDetail = new UserInfo({
-  userName: proTitle,
-  userDetail: proSubTitle,
+  userNameSelector: proTitle,
+  userDetailSelector: proSubTitle,
 });
 
 function renderCard(data, cardTemplate) {
@@ -55,8 +55,8 @@ const cardDisplay = document.querySelector(selectors.cardTemplate);
 /////////////////////////////////////////////////////////////////////////Profile modal
 const formProfileName = new PopupWithForm(
   {
-    handleFormSubmit: ({userName, userDetail}) => {
-      formProfileDetail.setUserInfo(userName, userDetail);
+    handleFormSubmit: ({userNameSelector, userDetailSelector}) => {
+      formProfileDetail.setUserInfo(userNameSelector, userDetailSelector);
     },
   },
   "#edit-profile-popup"
