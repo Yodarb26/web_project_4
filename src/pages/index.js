@@ -55,8 +55,8 @@ const cardDisplay = document.querySelector(selectors.cardTemplate);
 /////////////////////////////////////////////////////////////////////////Profile modal
 const formProfileName = new PopupWithForm(
   {
-    handleFormSubmit: ({userNameSelector, userDetailSelector}) => {
-      formProfileDetail.setUserInfo(userNameSelector, userDetailSelector);
+    handleFormSubmit: ({userName, userDetail}) => {
+      formProfileDetail.setUserInfo(userName, userDetail);
     },
   },
   "#edit-profile-popup"

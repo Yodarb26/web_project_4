@@ -1,6 +1,6 @@
   export default class Card {
     constructor(data, template) {
-      this._data = data.data;
+      // this._data = data.data;
       this._title = data.data.title;
       this._url = data.data.url;
       this._element = null;
@@ -38,7 +38,8 @@
       });
       this._imageElement.addEventListener("click", (evt) => {
         //card preview event listener
-        this._handleCardPreview({ url: this._data.url, title: this._data.title });
+        // this._handleCardPreview({ url: this._data.url, title: this._data.title });
+        this._handleCardPreview({ url: this._url, title: this._title });
       });
     };
 

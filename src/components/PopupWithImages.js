@@ -23,7 +23,6 @@ export default class PopupWithImages extends Popup {
   //   this._modalCaption.textContent = title;
   //   super.open();
   // }
-
 }
 
 
