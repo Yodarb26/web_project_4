@@ -50,11 +50,8 @@ export const closeImagePreviewButton =
 export const closeProfileButton = document.querySelector(
   "#close-profile-popup"
 );
-
-// export const proTitle = document.querySelector(".profile__title");
 export const proTitle = ".profile__title";
 export const proSubTitle = ".profile__subtitle";
-// export const proSubTitle = document.querySelector(".profile__subtitle");
 
 export const imagePopup = document.querySelector("#image-popup");
 export const modalImageElement = imagePopup.querySelector(
